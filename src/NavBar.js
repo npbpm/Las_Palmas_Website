@@ -101,32 +101,25 @@ const ResponsiveAppBar = (props) => {
 
   return (
     <AppBar position="static" color="transparent" elevation={0}>
-      <Container
-        maxWidth="xl"
-        sx={{
-          marginTop: "7rem",
-          marginBottom: "7rem",
-        }}
-      >
+      <Container maxWidth="100%">
         <Toolbar disableGutters>
           <Typography
-            variant="h6"
             noWrap
             component="a"
             href="/"
             sx={{
-              mr: 2,
               display: {
                 xs: "none",
                 md: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                width: "auto",
               },
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "black",
-              textDecoration: "overline",
+              textDecoration: "none",
             }}
           >
             <img
@@ -139,11 +132,10 @@ const ResponsiveAppBar = (props) => {
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
-              aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              sx={{ color: "white" }}
+              sx={{ color: "black" }}
             >
               <MenuIcon />
             </IconButton>
@@ -167,7 +159,10 @@ const ResponsiveAppBar = (props) => {
             >
               {pages.map((page, idx) => (
                 <MenuItem key={idx} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page.text}</Typography>
+                  <NavButton
+                    page={page}
+                    handleCloseNavMenu={handleCloseNavMenu}
+                  />
                 </MenuItem>
               ))}
             </Menu>
@@ -178,10 +173,8 @@ const ResponsiveAppBar = (props) => {
             component="a"
             href=""
             sx={{
-              mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "black",
@@ -200,17 +193,19 @@ const ResponsiveAppBar = (props) => {
               display: {
                 xs: "none",
                 md: "flex",
-                justifyContent: "space-between",
+                justifyContent: "flex-end",
                 alignItems: "center",
               },
             }}
           >
             {pages.map((page, idx) => (
-              <NavButton
-                key={idx}
-                page={page}
-                handleCloseNavMenu={handleCloseNavMenu}
-              />
+              <div style={{ margin: "20px" }}>
+                <NavButton
+                  key={idx}
+                  page={page}
+                  handleCloseNavMenu={handleCloseNavMenu}
+                />
+              </div>
             ))}
           </Box>
         </Toolbar>

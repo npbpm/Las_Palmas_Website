@@ -32,11 +32,12 @@ function MenuPopupState(props) {
               redirect(page.path);
             }}
             sx={{
-              color: "white",
-              fontWeight: "700",
+              color: "black",
+              fontWeight: "500",
               fontSize: "1.2rem",
               bgcolor: "transparent",
               textTransform: "none",
+              fontFamily: "'Lobster', cursive !important",
             }}
           >
             {page.text}
@@ -66,6 +67,7 @@ function MenuPopupState(props) {
         className={classes.link}
         to={page.path}
         onClick={(e) => handleCloseNavMenu(e, page.path)}
+        style={{ color: "black" }}
       >
         {page.text}
       </Link>

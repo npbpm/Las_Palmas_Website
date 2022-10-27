@@ -6,3 +6,10 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
   }
+
+  .App{
+    background-image: url("../images/pattern-randomized.svg");
+    background-size: cover;
+    background-position: bottom;
+    /* background by SVGBackgrounds.com */
+  }

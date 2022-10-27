@@ -3,7 +3,16 @@ import { Link } from "react-router-dom";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { IconButton, Typography } from "@mui/material";
 import "./styles/Footer.css";
+
+const openNewTab = (e, url) => {
+  e.preventDefault();
+  window.open(url, "_blank", "noopener,noreferer");
+};
 
 function Footer() {
   return (
@@ -11,7 +20,7 @@ function Footer() {
       <ul className="footer">
         <li className="list-section">
           <div>
-            <h5>Acceso Rapido</h5>
+            <Typography variant="h5">Acceso Rapido</Typography>
             <ul>
               <li>
                 <Link to="/">Inicio</Link>
@@ -33,7 +42,7 @@ function Footer() {
         </li>
         <li className="list-section">
           <div>
-            <h5>Contáctenos</h5>
+            <Typography variant="h5">Contáctenos</Typography>
             <ul>
               <li>
                 <span>
@@ -86,6 +95,32 @@ function Footer() {
             Nicolás Pérez
           </a>
         </p>
+        <div className="logos">
+          <IconButton
+            onClick={(e) =>
+              openNewTab(e, "https://www.facebook.com/palmasdecocora/")
+            }
+          >
+            <FacebookIcon fontSize="large" />
+          </IconButton>
+          <IconButton
+            onClick={(e) =>
+              openNewTab(
+                e,
+                "https://api.whatsapp.com/send/?phone=573137321738&text&type=phone_number&app_absent=0"
+              )
+            }
+          >
+            <WhatsAppIcon fontSize="large" />
+          </IconButton>
+          <IconButton
+            onClick={(e) =>
+              openNewTab(e, "https://www.instagram.com/laspalmasdecocora/")
+            }
+          >
+            <InstagramIcon fontSize="large" />
+          </IconButton>
+        </div>
       </div>
     </footer>
   );

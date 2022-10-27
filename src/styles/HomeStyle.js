@@ -1,14 +1,7 @@
-import background from "../images/pattern-randomized.svg";
-
 const style = {
   home: {
     width: "100%",
     height: "auto",
-    backgroundImage: `url(${background})`,
-    /* backgroundRepeat: "no-repeat", */
-    backgroundSize: "cover",
-    backgroundPosition: "bottom",
-    /* background by SVGBackgrounds.com */
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",

@@ -75,7 +75,7 @@ function Home(props) {
         <div>
           <Typography
             variant="h1"
-            sx={{ borderBottom: "solid black 2px", borderRadius: "30px" }}
+            sx={{ borderBottom: "solid black 4px", borderRadius: "30px" }}
           >
             El Lugar
           </Typography>
