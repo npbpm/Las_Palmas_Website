@@ -1,0 +1,69 @@
+.service-card{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 35px;
+    /* background-image: url("../images/pattern-randomized.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+.service-card-image{
+    max-height: 100%;
+    max-width: 100%;
+    width: 450px;
+    height: 400px;
+    display: block;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    border-radius: 50%;
+    
+}
+
+.service-card-image:hover{
+    transform: scale(1.04);
+    transition: all ease-in-out 0.4s;
+}
+
+.service-card-text{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 10px
+}
+
+.right{
+    margin-right: auto;
+}
+
+p{
+    font-family: 'Libre Baskerville', serif;
+}
+
+.description{
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: 'Libre Baskerville', serif;
+    padding: 10px;
+    border-radius: 13px;
+    width: 80%
+}
+
+.title {
+    margin-top: 0;
+    text-align: center;
+    font-weight: 900;
+    font-family: 'Lobster', cursive !important;
+}
+
+h1{
+    font-family: 'Lobster', cursive !important;
+}
+
+h3{
+    font-family: 'Lobster', cursive !important;
+}

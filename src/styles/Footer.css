@@ -1,0 +1,43 @@
+li a {
+    text-decoration: none;
+    color: black
+}
+
+li a:hover{
+    color: rgb(34, 95, 34);
+    transition: ease-in-out all 0.2s;
+}
+
+.footer{
+    background-color: grey;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: relative;
+    bottom: 0;
+    margin-bottom: 0;
+}
+
+div .list-section{
+    text-align: center;
+}
+
+li{
+    list-style: none;
+    text-align: left;
+}
+
+.developer{
+    text-decoration: none;
+    color: black
+}
+
+.developer:hover {
+    color:rgb(34, 95, 34);
+    transition: ease-in-out all 0.3s;
+}
+
+footer .social-media{
+    margin-left: 15px;
+}
