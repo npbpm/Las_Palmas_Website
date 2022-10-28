@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { withStyles } from "@mui/styles";
 import ServiceCard from "./ServiceCard";
 import { Typography } from "@mui/material";
@@ -38,7 +38,8 @@ function Home(props) {
     },
     {
       title: "Atracciones",
-      description: "Disfrute de nuestras instalaciones para niños y adultos.",
+      description:
+        "Contamos con una zona adaptada para los niños, para que los más chicos puedan divertirse, mientras los más grandes disfrutan de los servicios del Restaurante",
       img: "./images/Atracciones.jpeg",
       path: "/games",
     },
@@ -73,12 +74,7 @@ function Home(props) {
     <div className={classes.home}>
       <div className={classes.homeBody}>
         <div>
-          <Typography
-            variant="h1"
-            sx={{ borderBottom: "solid black 4px", borderRadius: "30px" }}
-          >
-            El Lugar
-          </Typography>
+          <Typography variant="h1">El Lugar</Typography>
           <section className={classes.location}>
             <img
               src={require("./images/EntradaParqueadero.jpeg")}
@@ -96,7 +92,7 @@ function Home(props) {
                 margin: "15px",
                 padding: "20px",
                 borderRadius: "13px",
-                backgroundColor: "rgba(255,255,255,0.9)",
+                backgroundColor: "#eeeeee",
               }}
             >
               Adentrados en el valle de cocora, ubicados en el Km 10 del Valle,
@@ -119,4 +115,4 @@ function Home(props) {
   );
 }
 
-export default withStyles(style)(Home);
+export default withStyles(style)(memo(Home));

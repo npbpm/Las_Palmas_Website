@@ -3,6 +3,7 @@ import { withStyles } from "@mui/styles";
 import FormDialog from "./Formdialog";
 import PersonIcon from "@mui/icons-material/Person";
 import style from "./styles/ReviewsStyle";
+import { Typography } from "@mui/material";
 
 function Reviews(props) {
   const { classes } = props;
@@ -84,6 +85,7 @@ function Reviews(props) {
 
   return (
     <div className={classes.container}>
+      <Typography variant="h1">Testimonios</Typography>
       <div className={classes.content}>
         <div className={classes.opinions}>
           {opinions.map((opinion, idx) => (

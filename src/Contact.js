@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import { withStyles } from "@mui/styles";
 import Button from "@mui/material/Button";
 import { send } from "emailjs-com";
@@ -8,6 +8,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 import style from "./styles/ContacStyle";
+import { Typography } from "@mui/material";
 
 function Bookings(props) {
   const { classes } = props;
@@ -46,13 +47,13 @@ function Bookings(props) {
 
   return (
     <div className={classes.container}>
-      <h1>Contáctenos</h1>
+      <Typography variant="h1">Contáctenos</Typography>
       <div className={classes.content}>
         <div className={classes.form}>
           <ValidatorForm onSubmit={handleSubmit}>
             <TextValidator
               autoFocus
-              fullWidth
+              sx={{ width: "80%" }}
               margin="dense"
               id="Name"
               name="Name"
@@ -66,7 +67,7 @@ function Bookings(props) {
             />
             <TextValidator
               margin="dense"
-              fullWidth
+              sx={{ width: "80%" }}
               id="Email"
               name="Email"
               label="Email"
@@ -79,7 +80,7 @@ function Bookings(props) {
             />
             <TextValidator
               margin="dense"
-              fullWidth
+              sx={{ width: "80%" }}
               id="Phone"
               name="Phone"
               label="Teléfono"
@@ -92,7 +93,7 @@ function Bookings(props) {
             />
             <TextValidator
               margin="dense"
-              fullWidth
+              sx={{ width: "80%" }}
               id="City"
               name="City"
               label="City"
@@ -103,7 +104,7 @@ function Bookings(props) {
             />
             <TextValidator
               margin="dense"
-              fullWidth
+              sx={{ width: "80%" }}
               id="Message"
               name="Message"
               label="Message"
@@ -118,7 +119,7 @@ function Bookings(props) {
           </ValidatorForm>
         </div>
         <div className={classes.contactUs}>
-          <h5>Contáctenos</h5>
+          <Typography variant="h5">Contáctenos</Typography>
           <ul>
             <li>
               <span>
@@ -156,4 +157,4 @@ function Bookings(props) {
   );
 }
 
-export default withStyles(style)(Bookings);
+export default withStyles(style)(memo(Bookings));

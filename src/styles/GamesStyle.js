@@ -1,37 +1,22 @@
-import background from "../images/flat-mountains.svg";
-
 const style = {
   content: {
     padding: "10px",
+    fontFamily: "'Libre Baskerville', serif !important",
     display: "flex",
+    marginTop: "100px",
     "& img": {
-      boxShadow: "10px 10px 5px #ccc",
-      mozBoxShadow: "10px 10px 5px #ccc",
-      webkitBoxShadow: "10px 10px 5px #ccc",
-      khtmlBoxShadow: "10px 10px 5px #ccc",
-      borderRadius: "5px",
       maxWidth: "100%",
       maxHeight: "100%",
-    },
-    "& p": {
-      boxShadow: "rgb(38, 57, 77) 0px 20px 30px -10px",
-      marginLeft: "auto",
-      marginRight: "auto",
     },
     "& li": {
       marginLeft: "15px",
     },
     alignItems: "center",
-    justifyContent: "space-evenly",
+    justifyContent: "center",
   },
   container: {
     textAlign: "center",
-    backgroundImage: `url(${background})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
     height: "1000px",
-    /* background by SVGBackgrounds.com */
   },
 };
 

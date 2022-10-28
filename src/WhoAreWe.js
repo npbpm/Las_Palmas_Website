@@ -1,15 +1,16 @@
-import React from "react";
+import React, { memo } from "react";
 import { withStyles } from "@mui/styles";
 import style from "./styles/WhoAreWeStyle";
+import { Typography } from "@mui/material";
 
 function WhoAreWe(props) {
   const { classes } = props;
 
   return (
     <div className={classes.container}>
-      <h1>Quienes Somos?</h1>
+      <Typography variant="h1">Quienes Somos?</Typography>
       <div className={classes.description}>
-        <p className={classes.paragraph}>
+        <p className={classes.paragraphHistory}>
           Tenemos el orgullo de decir que somos el primer restaurante en el
           Valle de Cocora; gestores de la corriente turística hacia la región
           con una tradición de más de 30 años en el departamento del Quindío.
@@ -19,12 +20,12 @@ function WhoAreWe(props) {
           restaurantería. <br />
         </p>
         <img
-          className={classes.img}
+          className={classes.imgEntrance}
           src={require("./images/Entrada.jpeg")}
           alt="Not found"
         />
       </div>
-      <h1>Nuestra Historia</h1>
+      <Typography variant="h3">Nuestra Historia</Typography>
       <div className={classes.history}>
         <p className={classes.paragraph}>
           Desde sus inicios, Las Palmas de Cocora han sido un restaurante
@@ -33,6 +34,9 @@ function WhoAreWe(props) {
           <br />
           Fue el primer restaurante que apareció en el Valle de Cocora
           impulsando así el turismo y el desarrollo de la región.
+          <br />
+          Hemos sido durante años un negocio familiar, por lo que nos
+          preocupamos por hacer que cada quién se sienta como en su casa
         </p>
         <img
           className={classes.img}
@@ -40,14 +44,15 @@ function WhoAreWe(props) {
           alt="img Not found"
         />
         <p className={classes.paragraph}>
-          Y desde entonces, este ha sido el lugar por excelencia para pasar un
-          buen momento lejos de la ciudad, en familia, impregnandose de la
-          naturaleza y de la hermosura del Valle.
+          Todos nuestros esfuerzos siempre han sido y siempre serán para hacer
+          de este el lugar por excelencia para pasar un buen momento lejos de la
+          ciudad, en familia, impregnandose de la naturaleza y de la hermosura
+          del Valle.
           <br />
         </p>
       </div>
-      <h1>Premios</h1>
-      <div className={classes.awards}>
+      <Typography variant="h3">Asociaciones</Typography>
+      <div className={classes.society}>
         <img
           className={classes.imgCertificate}
           src={require("./images/CertificacionPalmas.png")}
@@ -58,4 +63,4 @@ function WhoAreWe(props) {
   );
 }
 
-export default withStyles(style)(WhoAreWe);
+export default withStyles(style)(memo(WhoAreWe));

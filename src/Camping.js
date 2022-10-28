@@ -1,7 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import { withStyles } from "@mui/styles";
 import Slideshow from "./SlideShow";
 import style from "./styles/CampingStyle";
+import { Typography } from "@mui/material";
 
 const images = [
   {
@@ -20,7 +21,7 @@ function Camping(props) {
 
   return (
     <div className={classes.container}>
-      <h1>Camping</h1>
+      <Typography variant="h1">Camping</Typography>
       <div className={classes.content}>
         <Slideshow slideImages={images} width={"700px"} height={"500px"} />
         <div className={classes.description}>
@@ -68,4 +69,4 @@ function Camping(props) {
   );
 }
 
-export default withStyles(style)(Camping);
+export default withStyles(style)(memo(Camping));

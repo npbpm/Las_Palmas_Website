@@ -1,5 +1,3 @@
-import background from "../images/flat-mountains.svg";
-
 const style = {
   content: {
     padding: "10px",
@@ -7,19 +5,19 @@ const style = {
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "space-evenly",
+    marginTop: "100px",
   },
   container: {
     textAlign: "center",
-    backgroundImage: `url(${background})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
     height: "auto",
-    /* background by SVGBackgrounds.com */
     "& p": {
       boxShadow: "rgb(38, 57, 77) 0px 20px 30px -10px",
-      margin: "5px",
-      padding: "5px",
+      marginLeft: "20px",
+      padding: "20px",
+      backgroundColor: "#eeeeee",
+      fontFamily: "'Libre Baskerville', serif !important",
+      borderRadius: "13px",
+      fontSize: "1.2em",
     },
   },
   intro: {

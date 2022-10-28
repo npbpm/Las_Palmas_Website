@@ -15,7 +15,7 @@ const style = {
       boxShadow: "rgb(38, 57, 77) 0px 20px 30px -10px",
       marginLeft: "auto",
       marginRight: "auto",
-      backgroundColor: "rgba(255,255,255,0.9)",
+      backgroundColor: "#eeeeee",
       padding: "20px",
     },
   },

@@ -1,8 +1,13 @@
-import React from "react";
+import React, { memo } from "react";
 import { withStyles } from "@mui/styles";
 import Slideshow from "./SlideShow";
 import Menu from "./images/Menu.pdf";
 import style from "./styles/RestaurantStyle";
+import { Typography } from "@mui/material";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import { red, green, yellow } from "@mui/material/colors";
+import LandscapeIcon from "@mui/icons-material/Landscape";
+import AirIcon from "@mui/icons-material/Air";
 
 const slideImages = [
   {
@@ -45,9 +50,9 @@ function Restaurant(props) {
 
   return (
     <div className={classes.container}>
-      <h1>Restaurante</h1>
+      <Typography variant="h1">Restaurante</Typography>
       <div className={classes.content}>
-        <Slideshow slideImages={slideImages} width={"500px"} height={"300px"} />
+        <Slideshow slideImages={slideImages} width={"500px"} height={"470px"} />
         <div className={classes.text}>
           <div className={classes.description}>
             <p>
@@ -77,7 +82,16 @@ function Restaurant(props) {
               <h2>Ambientes</h2>
               <ul>
                 <li>
-                  Ambiente Romántico
+                  <div className={classes.plans}>
+                    <span>
+                      <FavoriteIcon sx={{ color: `${red[700]}` }} />
+                    </span>
+                    <p>Ambiente Romántico</p>
+                    <span>
+                      <FavoriteIcon sx={{ color: `${red[700]}` }} />
+                    </span>
+                  </div>
+
                   <br />
                   <div style={{ marginLeft: "10px" }}>
                     Deléitese al interior del restaurante con ambiente romántico
@@ -85,17 +99,34 @@ function Restaurant(props) {
                   </div>
                 </li>
                 <li>
-                  Ambiente de Naturaleza
+                  <div className={classes.plans}>
+                    <span>
+                      <LandscapeIcon sx={{ color: `${green[700]}` }} />
+                    </span>
+                    <p>Ambiente de Naturaleza</p>
+                    <span>
+                      <LandscapeIcon sx={{ color: `${green[700]}` }} />
+                    </span>
+                  </div>
+
                   <br />
                   <div style={{ marginLeft: "10px" }}>
                     Déjese llevar por la naturaleza sentado en mesas rusticas
                     bajo los árboles en el jardín de los gnomos disfrutando de
-                    un exquisito plato mientras apreciamos la danza de los ganso
-                    en la tranquilidad de un lago.
+                    un exquisito plato mientras apreciamos la danza de los
+                    gansos en la tranquilidad nuestro lago.
                   </div>
                 </li>
                 <li>
-                  Ambiente Folclórico Quindiano
+                  <div className={classes.plans}>
+                    <span>
+                      <AirIcon sx={{ color: yellow[800] }} />
+                    </span>
+                    <p>Ambiente Folclórico Quindiano</p>
+                    <span>
+                      <AirIcon sx={{ color: yellow[800] }} />
+                    </span>
+                  </div>
                   <br />
                   <div style={{ marginLeft: "10px" }}>
                     Si desea un ambiente folclórico disfrute de la pagoda, con
@@ -112,4 +143,4 @@ function Restaurant(props) {
   );
 }
 
-export default withStyles(style)(Restaurant);
+export default withStyles(style)(memo(Restaurant));

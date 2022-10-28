@@ -51,11 +51,20 @@ function MenuPopupState(props) {
         >
           {page.subservices.map((subservice, idx) => (
             <Link
-              style={{ textDecoration: "none", color: "black" }}
+              style={{
+                textDecoration: "none",
+                color: "black",
+              }}
               to={subservice.path}
               key={idx}
             >
-              <MenuItem>{subservice.title}</MenuItem>
+              <MenuItem
+                sx={{
+                  fontFamily: "'Libre Baskerville', serif",
+                }}
+              >
+                {subservice.title}
+              </MenuItem>
             </Link>
           ))}
         </Menu>

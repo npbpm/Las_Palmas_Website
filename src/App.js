@@ -22,6 +22,7 @@ import Bookings from "./Bookings";
 import Contact from "./Contact";
 import { withStyles } from "@mui/styles";
 import style from "./styles/AppStyle";
+import { memo } from "react";
 
 function App(props) {
   const { classes } = props;
@@ -40,7 +41,6 @@ function App(props) {
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/booking" element={<Bookings />} />
           <Route path="/contact-us" element={<Contact />} />
-          <Route path="/menu" element={<ErrorSite />} />
           <Route path="/who-are-we" element={<WhoAreWe />} />
           <Route path="/arrive" element={<Arrive />} />
           <Route path="/cocora-valley" element={<CocoraValley />} />
@@ -60,4 +60,4 @@ function App(props) {
   );
 }
 
-export default withStyles(style)(App);
+export default withStyles(style)(memo(App));

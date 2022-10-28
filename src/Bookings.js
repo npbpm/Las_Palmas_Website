@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import { withStyles } from "@mui/styles";
 import Button from "@mui/material/Button";
 import { send } from "emailjs-com";
@@ -8,6 +8,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 import style from "./styles/BookingsStyle";
+import { Typography } from "@mui/material";
 
 function Bookings(props) {
   const { classes } = props;
@@ -60,7 +61,7 @@ function Bookings(props) {
 
   return (
     <div className={classes.container}>
-      <h1>Reservas</h1>
+      <Typography variant="h1">Reservas</Typography>
       <div className={classes.content}>
         <div className={classes.form}>
           <ValidatorForm onSubmit={handleSubmit}>
@@ -76,6 +77,7 @@ function Bookings(props) {
               value={toSend.Name}
               validators={["required"]}
               errorMessages={["Porfavor llene su nombre"]}
+              sx={{ width: "80%" }}
             />
             <TextValidator
               margin="dense"
@@ -88,8 +90,10 @@ function Bookings(props) {
               value={toSend.Email}
               validators={["required"]}
               errorMessages={["Porfavor llene su Email"]}
+              sx={{ width: "80%" }}
             />
             <TextValidator
+              sx={{ width: "80%" }}
               margin="dense"
               id="Phone"
               name="Phone"
@@ -102,6 +106,7 @@ function Bookings(props) {
               errorMessages={["Porfavor llene su Teléfono"]}
             />
             <TextValidator
+              sx={{ width: "80%" }}
               margin="dense"
               id="Quantity"
               name="Quantity"
@@ -114,6 +119,7 @@ function Bookings(props) {
               errorMessages={["Porfavor indiquenos cuanta gente vendrías"]}
             />
             <TextValidator
+              sx={{ width: "80%" }}
               margin="dense"
               id="ArrivalDate"
               name="ArrivalDate"
@@ -128,6 +134,7 @@ function Bookings(props) {
               errorMessages={["Porfavor indiquenos cuando empieza su estadía"]}
             />
             <TextValidator
+              sx={{ width: "80%" }}
               margin="dense"
               id="DepartureDate"
               name="DepartureDate"
@@ -142,6 +149,7 @@ function Bookings(props) {
               errorMessages={["Porfavor indiquenos cuando termina su estadía"]}
             />
             <TextValidator
+              sx={{ width: "80%" }}
               margin="dense"
               id="Message"
               name="Message"
@@ -157,7 +165,7 @@ function Bookings(props) {
           </ValidatorForm>
         </div>
         <div className={classes.contactUs}>
-          <h5>Contáctenos</h5>
+          <Typography variant="h5">Contáctenos</Typography>
           <ul>
             <li>
               <span>
@@ -195,4 +203,4 @@ function Bookings(props) {
   );
 }
 
-export default withStyles(style)(Bookings);
+export default withStyles(style)(memo(Bookings));

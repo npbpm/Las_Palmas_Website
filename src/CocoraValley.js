@@ -1,19 +1,24 @@
-import React from "react";
+import React, { memo } from "react";
 import { withStyles } from "@mui/styles";
 import style from "./styles/CocoraValleyStyle";
+import { Typography } from "@mui/material";
 
 function CocoraValley(props) {
   const { classes } = props;
 
   return (
     <div style={{ textAlign: "center" }}>
-      <h1>El Valle de Cocora!</h1>
+      <Typography variant="h1">El Valle de Cocora</Typography>
       <div className={classes.container}>
         <div className={classes.images}>
           <img
             className={classes.image}
             src={require("./images/valley-ge1efec97d_1920.jpg")}
             alt="Error not found"
+            style={{
+              borderTopLeftRadius: "13px",
+              borderTopRightRadius: "13px",
+            }}
           />
           <img
             className={classes.image}
@@ -24,6 +29,10 @@ function CocoraValley(props) {
             className={classes.image}
             src={require("./images/valle-de-cocora-g982a52cf0_1920.jpg")}
             alt="Error not found"
+            style={{
+              borderBottomLeftRadius: "13px",
+              borderBottomRightRadius: "13px",
+            }}
           />
           <div className={classes.shadow}></div>
         </div>
@@ -83,10 +92,11 @@ function CocoraValley(props) {
             nacional de Colombia a través de la ley 61 de 1985, ratificada el 16
             de septiembre de 1985.
           </p>
+          {/* Fuente Wikipedia */}
         </div>
       </div>
     </div>
   );
 }
 
-export default withStyles(style)(CocoraValley);
+export default withStyles(style)(memo(CocoraValley));

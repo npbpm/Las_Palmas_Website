@@ -12,6 +12,7 @@ import { redirect } from "react-router-dom";
 import { withStyles } from "@mui/styles";
 import NavButton from "./NavButton";
 import style from "./styles/NavbarStyle";
+import { green } from "@mui/material/colors";
 
 const pages = [
   { text: "Inicio", path: "/", subservices: 0 },
@@ -102,7 +103,14 @@ const ResponsiveAppBar = (props) => {
   return (
     <AppBar position="static" color="transparent" elevation={0}>
       <Container maxWidth="100%">
-        <Toolbar disableGutters>
+        <Toolbar
+          disableGutters
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
           <Typography
             noWrap
             component="a"
@@ -189,19 +197,24 @@ const ResponsiveAppBar = (props) => {
           </Typography>
           <Box
             sx={{
-              flexGrow: 1,
+              flexGrow: 0,
               display: {
                 xs: "none",
+                width: "auto",
+                height: "50px",
                 md: "flex",
                 justifyContent: "flex-end",
                 alignItems: "center",
+                backgroundColor: `${green[500]}`,
+                borderRadius: "30px",
+                border: "solid 0.2rem #eeeeee",
+                boxShadow: "rgba(27, 176, 9, 0.1) 0px 4px 12px",
               },
             }}
           >
             {pages.map((page, idx) => (
-              <div style={{ margin: "20px" }}>
+              <div key={idx} style={{ margin: "20px" }}>
                 <NavButton
-                  key={idx}
                   page={page}
                   handleCloseNavMenu={handleCloseNavMenu}
                 />

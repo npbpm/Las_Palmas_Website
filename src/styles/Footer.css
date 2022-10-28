@@ -5,7 +5,7 @@ li a {
 }
 
 li a:hover{
-    color: rgb(34, 95, 34);
+    color: rgb(72, 185, 72);
     transition: ease-in-out all 0.2s;
 }
 
@@ -38,7 +38,7 @@ li{
 }
 
 .developer:hover {
-    color:rgb(48, 139, 48);
+    color:rgb(68, 168, 68);
     transition: ease-in-out all 0.3s;
 }
 
@@ -76,4 +76,9 @@ footer .social-media{
 
 .list-section div ul li a{
     margin: 2px
+}
+
+div.logos button:hover{
+    color: rgb(48, 139, 48);
+    transition: ease-in-out all 0.3s;
 }

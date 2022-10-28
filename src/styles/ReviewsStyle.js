@@ -1,27 +1,28 @@
-import background from "../images/flat-mountains.svg";
-
 const style = {
   container: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundImage: `url(${background})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
+    textAlign: "center",
+    marginLeft: "auto",
+    marginRight: "auto",
+    height: "1400px",
   },
   content: {
-    backgroundColor: "rgba(255,255,255,0.85)",
+    backgroundColor: "#eeeeee",
     boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
     width: "90%",
     textAlign: "center",
+    padding: "30px",
+    borderRadius: "13px",
+    marginLeft: "auto",
+    marginRight: "auto",
+    marginTop: "100px",
   },
   opinions: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     flexWrap: "wrap",
+    marginBottom: "30px",
+    padding: "20px",
   },
   opinion: {
     margin: "5px",

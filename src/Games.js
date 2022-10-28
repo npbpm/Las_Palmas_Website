@@ -1,7 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import { withStyles } from "@mui/styles";
 import Slideshow from "./SlideShow";
 import style from "./styles/GamesStyle";
+import { Typography } from "@mui/material";
 
 const images = [
   {
@@ -26,14 +27,17 @@ function Games(props) {
 
   return (
     <div className={classes.container}>
-      <h1>Atracciones</h1>
+      <Typography variant="h1">Atracciones</Typography>
       <div className={classes.content}>
         <Slideshow slideImages={images} width={"630px"} height={"600px"} />
         <div
           style={{
-            padding: "5px",
+            padding: "20px",
             textAlign: "center",
             boxShadow: "rgb(38, 57, 77) 0px 20px 30px -10px",
+            backgroundColor: "#eeeeee",
+            borderRadius: "13px",
+            marginLeft: "40px",
           }}
         >
           <ul>
@@ -54,4 +58,4 @@ function Games(props) {
   );
 }
 
-export default withStyles(style)(Games);
+export default withStyles(style)(memo(Games));

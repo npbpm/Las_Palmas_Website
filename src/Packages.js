@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { withStyles } from "@mui/styles";
 import { Typography } from "@mui/material";
 import style from "./styles/PackagesStyle";
@@ -15,12 +15,18 @@ function Packages(props) {
           src={require("./images/promocion.jpg")}
           style={{ width: "700px", height: "600px" }}
         />
-        <p style={{ marginLeft: "5px", padding: "5px" }}>
+        <p
+          style={{
+            marginLeft: "5px",
+            backgroundColor: "#eeeeee",
+            fontSize: "1.2em",
+          }}
+        >
           <strong>APROVECHA!!!</strong> ESTA TEMPORADA Y DISFRUTE DEL VALLE DE
           COCORA CON LOS <strong>“DESCUENTOS ESPECIALES”</strong> QUE LE OFRECE
           EL RESTAURANTE LAS PALMAS DE COCORA. “NO LO DEJES PASAR “<br />{" "}
-          <strong>CUMPLE AÑOS:</strong> celebra tú cumple años en RESTAURANTE
-          LAS PALMAS DE COCORA, presenta tú cedula y de cortesía de la casa te
+          <strong>CUMPLEAÑOS:</strong> celebra tú cumple años en RESTAURANTE LAS
+          PALMAS DE COCORA, presenta tú cedula y de cortesía de la casa te
           invitamos a un delicioso POSTRE de tu elección y 15 POR CIENTO DE
           DESCUENTO!! En tu plato. SI VAS EN DOMINGO PODRAS DISFRUTAR DE MUSICA
           EN VIVO.
@@ -182,4 +188,4 @@ function Packages(props) {
   );
 }
 
-export default withStyles(style)(Packages);
+export default withStyles(style)(memo(Packages));

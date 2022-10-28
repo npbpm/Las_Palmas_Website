@@ -1,10 +1,10 @@
-import React from "react";
+import React, { memo } from "react";
 import { withStyles } from "@mui/styles";
 import Slideshow from "./SlideShow";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import { IconButton } from "@mui/material";
+import { IconButton, Typography } from "@mui/material";
 import style from "./styles/GlampingStyle";
 
 const images = [
@@ -78,9 +78,6 @@ const insideImages = [
   {
     url: "./images/glamping24.jpeg",
   },
-  {
-    url: "./images/glamping17.jpeg",
-  },
 ];
 
 const outsideImages = [
@@ -108,7 +105,7 @@ function Glamping(props) {
 
   return (
     <div className={classes.container}>
-      <h1>Cocora Nidos del Condor - Glamping</h1>
+      <Typography variant="h1">Cocora Nidos del Condor - Glamping</Typography>
       <div className={classes.content}>
         <div className={classes.intro}>
           <Slideshow slideImages={images} width={"800px"} height={"600px"} />
@@ -140,7 +137,7 @@ function Glamping(props) {
             width={"500px"}
             height={"400px"}
           />
-          <p style={{ boxShadow: "none", width: "700px" }}>
+          <p style={{ width: "700px" }}>
             Nuestro servicio es de la mejor calidad, podrá disfrutar de la
             naturaleza, la fauna y la flora del valle todo con un servicio de
             alojamiento al aire libre VIP.
@@ -155,15 +152,22 @@ function Glamping(props) {
             width={"500px"}
             height={"400px"}
           />
-          <p style={{ boxShadow: "none", width: "700px" }}>
+          <p style={{ width: "700px" }}>
             Cada una de nuestras carpas cuenta con una mesa particular y una
             fogata para que puedan disfrutar de un momento inolvidable bajo las
             estrellas.
           </p>
         </div>
         <div className={classes.contact}>
-          <h4>Nuestras Redes</h4>
-          <div style={{ marginTop: "-25px" }}>
+          <Typography variant="h4">Nuestras Redes</Typography>
+          <div style={{ marginTop: "-5px" }}>
+            <IconButton
+              onClick={(e) =>
+                openNewTab(e, "https://www.facebook.com/Cocoranidosdelcondor")
+              }
+            >
+              <FacebookIcon fontSize="large" />
+            </IconButton>
             <IconButton
               onClick={(e) =>
                 openNewTab(
@@ -181,13 +185,6 @@ function Glamping(props) {
             >
               <InstagramIcon fontSize="large" />
             </IconButton>
-            <IconButton
-              onClick={(e) =>
-                openNewTab(e, "https://www.facebook.com/Cocoranidosdelcondor")
-              }
-            >
-              <FacebookIcon fontSize="large" />
-            </IconButton>
           </div>
         </div>
       </div>
@@ -195,4 +192,4 @@ function Glamping(props) {
   );
 }
 
-export default withStyles(style)(Glamping);
+export default withStyles(style)(memo(Glamping));

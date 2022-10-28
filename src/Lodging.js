@@ -1,7 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import { withStyles } from "@mui/styles";
 import Slideshow from "./SlideShow";
 import style from "./styles/LodgingStyle";
+import { Typography } from "@mui/material";
 
 const images = [
   {
@@ -20,14 +21,14 @@ function Lodging(props) {
 
   return (
     <div className={classes.container}>
-      <h1>La Cabaña</h1>
+      <Typography variant="h1">La Cabaña</Typography>
       <div className={classes.content}>
         <Slideshow slideImages={images} width={"700px"} height={"500px"} />
         <p>
           Viva una experiencia de paz, tranquilidad y armonía que le ofrece las
           palmas de cocora en su cabaña construida en madera, rodeada de
           coloridas flores, palmas de cera y enmarcada por la silueta de las
-          montañas de la cordillera central.
+          montañas de la cordillera central, hogar del cóndor andino.
           <br />
           <span style={{ textDecoration: "underline", fontWeight: "900" }}>
             NOTA: EN TEMPORADA BAJA HAY DESCUENTOS EN LAS TARIFAS!!!
@@ -41,4 +42,4 @@ function Lodging(props) {
   );
 }
 
-export default withStyles(style)(Lodging);
+export default withStyles(style)(memo(Lodging));

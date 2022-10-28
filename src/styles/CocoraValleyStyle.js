@@ -1,19 +1,19 @@
-import background from "../images/flat-mountains.svg";
-
 const style = {
   container: {
     display: "flex",
-    borderRadius: "10px",
     paddingTop: "3px",
-    backgroundImage: `url(${background})`,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
+    width: "99%",
+    marginRight: "auto",
+    marginLeft: "auto",
+    marginTop: "100px",
+    alignItems: "center",
   },
   images: {
     width: "40%",
     boxShadow:
-      "rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset",
+      "rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset",
+    marginRight: "10px",
+    borderRadius: "13px",
   },
   image: {
     maxWidth: "100%",
@@ -28,6 +28,11 @@ const style = {
     boxShadow: "rgb(38, 57, 77) 0px 20px 30px -10px",
     marginLeft: "auto",
     marginRight: "auto",
+    fontFamily: "'Libre Baskerville', serif",
+    backgroundColor: "#eeeeee",
+    padding: "20px",
+    borderRadius: "13px",
+    fontSize: "1.3rem",
   },
 };
 
