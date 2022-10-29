@@ -1,4 +1,4 @@
-import React, { useState, memo } from "react";
+import React, { useState, memo, useContext } from "react";
 import { withStyles } from "@mui/styles";
 import Button from "@mui/material/Button";
 import { send } from "emailjs-com";
@@ -9,11 +9,75 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 import style from "./styles/BookingsStyle";
 import { Typography } from "@mui/material";
+import { LanguageContext } from "./context/LanguageContext";
+
+const words = {
+  spanish: {
+    title: "Reservas",
+    name: "Nombre",
+    email: "Correo Electrónico",
+    phone: "Teléfono",
+    quantity: "Cantidad",
+    arrival: "Fecha de Llegada",
+    departure: "Fecha de Salida",
+    message: "Mensaje",
+    sendMessage: "Enviar",
+    contact: "Contáctenos",
+    address: "Primer restaurante a la izquierda",
+    errName: "Porfavor llene su nombre",
+    errEmail: "Porfavor introduzca un correo",
+    errPhone: "Porfavor denos un número de teléfono",
+    errQuantity: "Porfavor indiquenos cuanta gente sería",
+    errArrival: "Indiquenos cuando llega",
+    errDeparture: "Indiquenos cuando se va",
+  },
+  english: {
+    title: "Bookings",
+    name: "Name",
+    email: "Email",
+    phone: "Phone Number",
+    quantity: "Quantity",
+    arrival: "Arrival Date",
+    departure: "Departure Date",
+    message: "Message",
+    sendMessage: "Send",
+    contact: "Contact us",
+    address: "First restaurant to your left",
+    errName: "Please give us your name",
+    errEmail: "Please give us an email",
+    errPhone: "Please give us a phone number",
+    errQuantity: "Please tell us how many people will be coming",
+    errArrival: "Tell us when you are arriving",
+    errDeparture: "Tell us when you are leaving",
+  },
+};
 
 function Bookings(props) {
   const { classes } = props;
 
   const [type, setType] = useState("text");
+
+  const { language } = useContext(LanguageContext);
+
+  const {
+    title,
+    name,
+    email,
+    phone,
+    quantity,
+    arrival,
+    departure,
+    message,
+    sendMessage,
+    contact,
+    address,
+    errName,
+    errEmail,
+    errPhone,
+    errQuantity,
+    errArrival,
+    errDeparture,
+  } = words[language];
 
   const [toSend, setToSend] = useState({
     bookingId: uuid(),
@@ -61,7 +125,7 @@ function Bookings(props) {
 
   return (
     <div className={classes.container}>
-      <Typography variant="h1">Reservas</Typography>
+      <Typography variant="h1">{title}</Typography>
       <div className={classes.content}>
         <div className={classes.form}>
           <ValidatorForm onSubmit={handleSubmit}>
@@ -70,26 +134,26 @@ function Bookings(props) {
               margin="dense"
               id="Name"
               name="Name"
-              label="Nombre"
+              label={name}
               type="text"
               variant="standard"
               onChange={handleChange}
               value={toSend.Name}
               validators={["required"]}
-              errorMessages={["Porfavor llene su nombre"]}
+              errorMessages={[errName]}
               sx={{ width: "80%" }}
             />
             <TextValidator
               margin="dense"
               id="Email"
               name="Email"
-              label="Email"
+              label={email}
               type="email"
               variant="standard"
               onChange={handleChange}
               value={toSend.Email}
               validators={["required"]}
-              errorMessages={["Porfavor llene su Email"]}
+              errorMessages={[errEmail]}
               sx={{ width: "80%" }}
             />
             <TextValidator
@@ -97,33 +161,33 @@ function Bookings(props) {
               margin="dense"
               id="Phone"
               name="Phone"
-              label="Teléfono"
+              label={phone}
               type="text"
               variant="standard"
               onChange={handleChange}
               value={toSend.Phone}
               validators={["required"]}
-              errorMessages={["Porfavor llene su Teléfono"]}
+              errorMessages={[errPhone]}
             />
             <TextValidator
               sx={{ width: "80%" }}
               margin="dense"
               id="Quantity"
               name="Quantity"
-              label="Quantity"
+              label={quantity}
               type="number"
               variant="standard"
               onChange={handleChange}
               value={toSend.Quantity}
               validators={["required"]}
-              errorMessages={["Porfavor indiquenos cuanta gente vendrías"]}
+              errorMessages={[errQuantity]}
             />
             <TextValidator
               sx={{ width: "80%" }}
               margin="dense"
               id="ArrivalDate"
               name="ArrivalDate"
-              label="Arrival Date"
+              label={arrival}
               type={type}
               variant="standard"
               onChange={handleChange}
@@ -131,14 +195,14 @@ function Bookings(props) {
               onFocus={changeType}
               onBlur={changeType}
               validators={["required"]}
-              errorMessages={["Porfavor indiquenos cuando empieza su estadía"]}
+              errorMessages={[errArrival]}
             />
             <TextValidator
               sx={{ width: "80%" }}
               margin="dense"
               id="DepartureDate"
               name="DepartureDate"
-              label="Departure Date"
+              label={departure}
               type={type}
               variant="standard"
               onChange={handleChange}
@@ -146,26 +210,26 @@ function Bookings(props) {
               onFocus={changeType}
               onBlur={changeType}
               validators={["required"]}
-              errorMessages={["Porfavor indiquenos cuando termina su estadía"]}
+              errorMessages={[errDeparture]}
             />
             <TextValidator
               sx={{ width: "80%" }}
               margin="dense"
               id="Message"
               name="Message"
-              label="Message"
+              label={message}
               multiline
               variant="standard"
               onChange={handleChange}
               value={toSend.Message}
             />
             <Button variant="outlined" type="submit">
-              Enviar
+              {sendMessage}
             </Button>
           </ValidatorForm>
         </div>
         <div className={classes.contactUs}>
-          <Typography variant="h5">Contáctenos</Typography>
+          <Typography variant="h5">{contact}</Typography>
           <ul>
             <li>
               <span>
@@ -192,8 +256,7 @@ function Bookings(props) {
                 <LocationOnIcon />
               </span>
               <span>
-                Kilometro 10 Valle de Cocora Salento Quindío, primer restaurante
-                a mano izquierda
+                Kilometro 10 Valle de Cocora Salento Quindío, {address}
               </span>
             </li>
           </ul>

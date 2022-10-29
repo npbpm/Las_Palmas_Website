@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { memo, useContext } from "react";
 import { withStyles } from "@mui/styles";
 import Slideshow from "./SlideShow";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -6,6 +6,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { IconButton, Typography } from "@mui/material";
 import style from "./styles/GlampingStyle";
+import { LanguageContext } from "./context/LanguageContext";
 
 const images = [
   {
@@ -103,6 +104,8 @@ const openNewTab = (e, url) => {
 function Glamping(props) {
   const { classes } = props;
 
+  const { language } = useContext(LanguageContext);
+
   return (
     <div className={classes.container}>
       <Typography variant="h1">Cocora Nidos del Condor - Glamping</Typography>
@@ -115,14 +118,26 @@ function Glamping(props) {
               textAlign: "center",
             }}
           >
-            <p>
-              Les damos la bienvenida al glamping{" "}
-              <span style={{ fontWeight: "800" }}>Nidos del Condor</span>, el
-              único glamping ubicado en la cima del Valle de Cocora. Este es el
-              lugar perfecto para esas escapadas de un fin de semana en pareja,
-              para sacarse el peso de la ciudad y disfrutar de una experiencia
-              única dentro de las montañas del Valle de Cocora.
-            </p>
+            {language === "spanish" ? (
+              <p>
+                Les damos la bienvenida al glamping{" "}
+                <span style={{ fontWeight: "800" }}>Nidos del Condor</span>, el
+                único glamping ubicado en la cima del Valle de Cocora. Este es
+                el lugar perfecto para esas escapadas de un fin de semana en
+                pareja, para sacarse el peso de la ciudad y disfrutar de una
+                experiencia única dentro de las montañas del Valle de Cocora.
+              </p>
+            ) : (
+              <p>
+                We welcome you to our Glamping{" "}
+                <span style={{ fintWeight: "800" }}>Nidos del Cóndor</span>, the
+                only glamping located on the top of the Cocora Valley. This is
+                the perfect place for those one weekend couple runaways, take
+                this chance to take the city's weight of your shoulders and
+                enjoy of this unique experience deep inside the Valley's
+                mountains.
+              </p>
+            )}
           </div>
         </div>
         <div
@@ -137,11 +152,18 @@ function Glamping(props) {
             width={"500px"}
             height={"400px"}
           />
-          <p style={{ width: "700px" }}>
-            Nuestro servicio es de la mejor calidad, podrá disfrutar de la
-            naturaleza, la fauna y la flora del valle todo con un servicio de
-            alojamiento al aire libre VIP.
-          </p>
+          {language === "spanish" ? (
+            <p style={{ width: "700px" }}>
+              Nuestro servicio es de la mejor calidad, podrá disfrutar de la
+              naturaleza, la fauna y la flora del valle todo con un servicio de
+              alojamiento al aire libre VIP.
+            </p>
+          ) : (
+            <p style={{ width: "700px" }}>
+              With our first class service you will enjoy the nature, the fauna
+              and flora of the Valley, all with a VIP lodging service.
+            </p>
+          )}
         </div>
         <div
           className={classes.intro}
@@ -152,14 +174,24 @@ function Glamping(props) {
             width={"500px"}
             height={"400px"}
           />
-          <p style={{ width: "700px" }}>
-            Cada una de nuestras carpas cuenta con una mesa particular y una
-            fogata para que puedan disfrutar de un momento inolvidable bajo las
-            estrellas.
-          </p>
+          {language === "spanish" ? (
+            <p style={{ width: "700px" }}>
+              Cada una de nuestras carpas cuenta con una mesa particular y una
+              fogata para que puedan disfrutar de un momento inolvidable bajo
+              las estrellas.
+            </p>
+          ) : (
+            <p style={{ width: "700px" }}>
+              Every single one of our tents is integrated with an outside table
+              and a bonfire so you can enjoy an unforgetable moment under the
+              starlight.
+            </p>
+          )}
         </div>
         <div className={classes.contact}>
-          <Typography variant="h4">Nuestras Redes</Typography>
+          <Typography variant="h4">
+            {language === "spanish" ? "Nuestras Redes" : "Our Social Media"}
+          </Typography>
           <div style={{ marginTop: "-5px" }}>
             <IconButton
               onClick={(e) =>

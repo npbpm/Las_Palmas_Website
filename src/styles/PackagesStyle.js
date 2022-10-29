@@ -54,6 +54,10 @@ const style = {
     borderRadius: "13px",
     paddingTop: "10px",
     boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+    "&:hover": {
+      transform: "scale(1.2)",
+      transition: "ease-in-out all 0.3s",
+    },
   },
 };
 

@@ -1,8 +1,9 @@
-import React, { memo } from "react";
+import React, { memo, useContext } from "react";
 import { withStyles } from "@mui/styles";
 import Slideshow from "./SlideShow";
 import style from "./styles/GamesStyle";
 import { Typography } from "@mui/material";
+import { LanguageContext } from "./context/LanguageContext";
 
 const images = [
   {
@@ -22,12 +23,42 @@ const images = [
   },
 ];
 
+const words = {
+  spanish: {
+    title: "Atracciones",
+    content:
+      "LAS PALMAS DE COCORA lo invita a que disfrute de nuestras instalaciones para niños y adultos:",
+    games: "PARQUE INFANTIL",
+    volley: "CANCHA DE VOLEY-VERDE",
+    football: "CANCHA DE MICRO FÚTBOL",
+    animals: "TERNEROS",
+    lake: "LAGO CON GANSOS",
+    horses: "CABALLOS PARA CABALGATAS",
+  },
+  english: {
+    title: "Attractions",
+    content:
+      "LAS PALMAS DE COCORA invites you to enjoy our installations for children and adults: ",
+    games: "PLAY ZONE",
+    volley: "VOLLEYBALL FIELD",
+    football: "FOOTBALL FIELD",
+    animals: "COW CALVES",
+    lake: "GEESE LAKE",
+    horses: "HORSE RIDING",
+  },
+};
+
 function Games(props) {
   const { classes } = props;
 
+  const { language } = useContext(LanguageContext);
+
+  const { title, content, games, volley, football, animals, lake, horses } =
+    words[language];
+
   return (
     <div className={classes.container}>
-      <Typography variant="h1">Atracciones</Typography>
+      <Typography variant="h1">{title}</Typography>
       <div className={classes.content}>
         <Slideshow slideImages={images} width={"630px"} height={"600px"} />
         <div
@@ -41,16 +72,13 @@ function Games(props) {
           }}
         >
           <ul>
-            <h4>
-              LAS PALMAS DE COCORA lo invita a que disfrute de nuestras
-              instalaciones para niños y adultos:
-            </h4>
-            <li>PARQUE INFANTIL</li>
-            <li>CANCHA DE VOLEY-VERDE</li>
-            <li>CANCHA DE MICRO FÚTBOl</li>
-            <li>TERNEROS</li>
-            <li>LAGO CON GANSOS</li>
-            <li>CABALLOS PARA HACER CABALGATAS</li>
+            <Typography variant="h4">{content}</Typography>
+            <li>{games}</li>
+            <li>{volley}</li>
+            <li>{football}</li>
+            <li>{animals}</li>
+            <li>{lake}</li>
+            <li>{horses}</li>
           </ul>
         </div>
       </div>

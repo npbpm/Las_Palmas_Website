@@ -49,8 +49,8 @@ const words = {
     coffee: "Coffee House",
     lodging: "Lodging",
     camping: "Camping",
-    games: "Games",
-    horse: "Horse Back Riding",
+    games: "Attractions",
+    horse: "Horseback Riding",
     crafts: "Regional Crafts",
     glamping: "Glamping Cocora Nidos del Condor",
     flowers: "Florist Cocora Viva",
@@ -277,6 +277,7 @@ const ResponsiveAppBar = (props) => {
                 label="Language"
                 onChange={changeLanguage}
                 size="small"
+                variant="standard"
               >
                 <MenuItem value="spanish">🇨🇴</MenuItem>
                 <MenuItem value="english">🇺🇸</MenuItem>

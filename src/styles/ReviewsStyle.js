@@ -7,7 +7,6 @@ const style = {
   },
   content: {
     backgroundColor: "#eeeeee",
-    boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
     width: "90%",
     textAlign: "center",
     padding: "30px",
@@ -15,6 +14,7 @@ const style = {
     marginLeft: "auto",
     marginRight: "auto",
     marginTop: "100px",
+    boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
   },
   opinions: {
     display: "flex",

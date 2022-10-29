@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { withStyles } from "@mui/styles";
 import FormDialog from "./Formdialog";
 import PersonIcon from "@mui/icons-material/Person";
 import style from "./styles/ReviewsStyle";
 import { Typography } from "@mui/material";
+import { LanguageContext } from "./context/LanguageContext";
 
 function Reviews(props) {
   const { classes } = props;
@@ -13,6 +14,8 @@ function Reviews(props) {
   };
 
   const [opinions, setOpinions] = useState([]);
+
+  const { language } = useContext(LanguageContext);
 
   useEffect(() => {
     setOpinions(
@@ -85,7 +88,9 @@ function Reviews(props) {
 
   return (
     <div className={classes.container}>
-      <Typography variant="h1">Testimonios</Typography>
+      <Typography variant="h1">
+        {language === "spanish" ? "Testimonios" : "Reviews"}
+      </Typography>
       <div className={classes.content}>
         <div className={classes.opinions}>
           {opinions.map((opinion, idx) => (
@@ -93,7 +98,11 @@ function Reviews(props) {
               <p style={{ fontStyle: "italic" }}>{opinion.message}</p>
               <div style={{ display: "flex" }}>
                 <PersonIcon />
-                {opinion.name !== "" ? opinion.name : "ANONIMO"}
+                {opinion.name !== ""
+                  ? opinion.name
+                  : language === "spanish"
+                  ? "ANONIMO"
+                  : "ANONYMOUS"}
               </div>
             </div>
           ))}

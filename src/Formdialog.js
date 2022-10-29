@@ -11,6 +11,39 @@ import {
   ValidatorForm,
 } from "react-material-ui-form-validator";
 import { lightGreen } from "@mui/material/colors";
+import { useContext } from "react";
+import { LanguageContext } from "./context/LanguageContext";
+
+const words = {
+  spanish: {
+    newR: "Nuevo Testimonio",
+    text: "Su opinión es muy importante para nosotros!",
+    cancel: "Cancelar",
+    send: "Enviar",
+    poor: "Pobre",
+    medium: "Regular",
+    good: "Bueno",
+    veryGood: "Muy Bueno",
+    excelent: "Excelente",
+    nameRequired: "Porfavor llene su nombre",
+    scoreRequired: "Porfavor seleccione un puntaje",
+    reviewRequired: "Porfavor dejenos su opinión",
+  },
+  english: {
+    newR: "New Review",
+    text: "Your opinion is very important to us",
+    cancel: "Cancel",
+    send: "Send",
+    poor: "Poor",
+    medium: "Normal",
+    good: "Good",
+    veryGood: "Very Good",
+    excelent: "Excelent",
+    nameRequired: "Please fill out your name",
+    scoreRequired: "Please give us a score",
+    reviewRequired: "Please leave us your opinion",
+  },
+};
 
 export default function FormDialog(props) {
   const { addOpinion } = props;
@@ -18,6 +51,23 @@ export default function FormDialog(props) {
   const [name, setName] = React.useState("");
   const [opinion, setOpinion] = React.useState("");
   const [open, setOpen] = React.useState(false);
+
+  const { language } = useContext(LanguageContext);
+
+  const {
+    newR,
+    text,
+    cancel,
+    send,
+    poor,
+    medium,
+    good,
+    veryGood,
+    excelent,
+    nameRequired,
+    scoreRequired,
+    reviewRequired,
+  } = words[language];
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -55,23 +105,23 @@ export default function FormDialog(props) {
   const evaluations = [
     {
       value: 0,
-      text: "Pobre",
+      text: poor,
     },
     {
       value: 1,
-      text: "Regular",
+      text: medium,
     },
     {
       value: 2,
-      text: "Bueno",
+      text: good,
     },
     {
       value: 3,
-      text: "Muy Bueno",
+      text: veryGood,
     },
     {
       value: 4,
-      text: "Excelente",
+      text: excelent,
     },
   ];
 
@@ -82,39 +132,37 @@ export default function FormDialog(props) {
         sx={{ color: lightGreen[800], borderColor: lightGreen[500] }}
         onClick={handleClickOpen}
       >
-        Nuevo Testimonio
+        {newR}
       </Button>
       <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>Nuevo Testimonio</DialogTitle>
+        <DialogTitle>{newR}</DialogTitle>
         <DialogContent>
-          <DialogContentText>
-            Su opinión es muy importante para nosotros!
-          </DialogContentText>
+          <DialogContentText>{text}</DialogContentText>
           <ValidatorForm onSubmit={handleSubmit}>
             <TextValidator
               autoFocus
               margin="dense"
               id="name"
-              label="Nombre"
+              label={language === "spanish" ? "Nombre" : "Name"}
               type="text"
               fullWidth
               variant="standard"
               onChange={handleNameChange}
               value={name}
               validators={["required"]}
-              errorMessages={["Porfavor llene su nombre"]}
+              errorMessages={[nameRequired]}
             />
             <SelectValidator
               margin="dense"
               id="name"
-              label="Puntuación"
+              label={language === "spanish" ? "Puntuación" : "Score"}
               select
               value={evaluation}
               fullWidth
               variant="standard"
               onChange={handleChange}
               validators={["required"]}
-              errorMessages={["Porfavor seleccione un puntaje"]}
+              errorMessages={[scoreRequired]}
             >
               {evaluations.map((option) => (
                 <MenuItem key={option.value} value={option.value}>
@@ -125,17 +173,21 @@ export default function FormDialog(props) {
             <TextValidator
               margin="dense"
               id="name"
-              label="Dejenos su opinión"
+              label={
+                language === "spanish"
+                  ? "Dejenos su opinión"
+                  : "Leave us your opinion"
+              }
               multiline
               fullWidth
               variant="standard"
               value={opinion}
               onChange={handleOpinionChange}
               validators={["required"]}
-              errorMessages={["Porfavor dejenos su opinión"]}
+              errorMessages={[reviewRequired]}
             />
-            <Button onClick={handleClose}>Cancelar</Button>
-            <Button type="submit">Enviar</Button>
+            <Button onClick={handleClose}>{cancel}</Button>
+            <Button type="submit">{send}</Button>
           </ValidatorForm>
         </DialogContent>
       </Dialog>

@@ -13,6 +13,10 @@ const style = {
     },
     alignItems: "center",
     justifyContent: "center",
+    "& h4": {
+      fontSize: "1.7em",
+      marginBottom: "20px",
+    },
   },
   container: {
     textAlign: "center",

@@ -3,7 +3,8 @@ const style = {
     textAlign: "center",
     marginLeft: "auto",
     marginRight: "auto",
-    height: "800px",
+    height: "900px",
+    overflow: "show",
   },
   content: {
     display: "flex",
