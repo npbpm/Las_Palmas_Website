@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import EmailIcon from "@mui/icons-material/Email";
@@ -8,41 +8,78 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { IconButton, Typography } from "@mui/material";
 import "./styles/Footer.css";
+import { LanguageContext } from "./context/LanguageContext";
 
 const openNewTab = (e, url) => {
   e.preventDefault();
   window.open(url, "_blank", "noopener,noreferer");
 };
 
+const words = {
+  spanish: {
+    access: "Acceso Rapido",
+    home: "Inicio",
+    services: "Servicios",
+    packages: "Planes y Promociones",
+    reviews: "Testimonios",
+    contact: "Contáctenos",
+    address: "primer restaurante a la izquierda",
+    developper: "Desarrollado por",
+  },
+  english: {
+    access: "Quick Access",
+    home: "Home",
+    services: "Services",
+    packages: "Packages and Promotions",
+    reviews: "Reviews",
+    contact: "Contact Us",
+    address: "first restaurant to your left",
+    developper: "Developped By",
+  },
+};
+
 function Footer() {
+  const { language } = useContext(LanguageContext);
+
+  const {
+    access,
+    home,
+    services,
+    packages,
+    reviews,
+    contact,
+    address,
+    developper,
+  } = words[language];
+
   return (
     <footer>
       <ul className="footer">
         <li className="list-section">
           <div>
-            <Typography variant="h5">Acceso Rapido</Typography>
+            <Typography variant="h5">{access}</Typography>
             <ul>
               <li>
-                <Link to="/">Inicio</Link>
+                <Link to="/">{home}</Link>
               </li>
               <li>
-                <Link to="/services">Servicios</Link>
+                <Link to="/services">{services}</Link>
               </li>
               <li>
-                <Link to="/packages-and-sales">Planes y Promociones</Link>
+                <Link to="/packages-and-sales">{packages}</Link>
               </li>
               <li>
-                <Link to="/reviews">Testimonios</Link>
+                <Link to="/reviews">{reviews}</Link>
               </li>
               <li>
-                <Link to="/contact-us">Contáctenos</Link>
+                <Link to="/contact-us">{contact}</Link>
               </li>
             </ul>
           </div>
         </li>
         <li className="list-section">
           <div>
-            <Typography variant="h5">Contáctenos</Typography>
+            <Typography variant="h5">{contact}</Typography>
             <ul>
               <li>
                 <span>
@@ -69,8 +106,7 @@ function Footer() {
                   <LocationOnIcon />
                 </span>
                 <span>
-                  Kilometro 10 Valle de Cocora Salento Quindío, primer
-                  restaurante a mano izquierda
+                  Kilometro 10 Valle de Cocora Salento Quindío, {address}
                 </span>
               </li>
             </ul>
@@ -83,14 +119,16 @@ function Footer() {
             className="developer"
             href="http://www.laspalmasdecocora.com"
             target="_blank"
+            rel="noreferrer"
           >
             laspalmasdecocora.com
           </a>
-          © 2022 | Desarrollado por{" "}
+          © 2022 | {developper}{" "}
           <a
             className="developer"
             href="https://www.linkedin.com/in/nicolas-perez-burbano/"
             target="_blank"
+            rel="noreferrer"
           >
             Nicolás Pérez
           </a>

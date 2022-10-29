@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -13,80 +13,129 @@ import { withStyles } from "@mui/styles";
 import NavButton from "./NavButton";
 import style from "./styles/NavbarStyle";
 import { green } from "@mui/material/colors";
+import { Select } from "@mui/material";
+import { LanguageContext } from "./context/LanguageContext";
 
-const pages = [
-  { text: "Inicio", path: "/", subservices: 0 },
-  {
-    text: "El Lugar",
-    path: "/location",
-    subservices: [
-      {
-        title: "Quienes Somos?",
-        path: "/who-are-we",
-      },
-      {
-        title: "Como Llegar",
-        path: "/arrive",
-      },
-      {
-        title: "Valle de Cocora",
-        path: "/cocora-valley",
-      },
-    ],
+const words = {
+  spanish: {
+    home: "Inicio",
+    place: "El Lugar",
+    who: "Quienes Somos?",
+    arrive: "Como Llegar",
+    valley: "Valle de Cocora",
+    services: "Servicios",
+    restaurant: "Restaurante",
+    coffee: "Casita del Sabor",
+    lodging: "Hospedaje",
+    camping: "Campamento",
+    games: "Atracciones",
+    horse: "Paseos Écologicos a Caballo y Caminatas",
+    crafts: "Artesanías de la Región",
+    glamping: "Glamping Cocora Nidos del Condor",
+    flowers: "Vivero Cocora Viva",
+    packages: "Planes y Promociones",
+    reviews: "Testimonios",
+    bookings: "Reservas",
+    contact: "Contáctenos",
   },
-  {
-    text: "Servicios",
-    path: "/services",
-    subservices: [
-      {
-        title: "Restaurante",
-        path: "/restaurant",
-      },
-      {
-        title: "Casita del sabor",
-        path: "/cofee-house",
-      },
-      {
-        title: "Hospedaje",
-        path: "/lodging",
-      },
-      {
-        title: "Camping",
-        path: "/camping",
-      },
-      {
-        title: "Atracciones",
-        path: "/games",
-      },
-      {
-        title: "Paseos Écologicos a Caballo y Caminatas",
-        path: "/horseback-riding",
-      },
-      {
-        title: "Artesanías de la Región",
-        path: "/regional-crafts",
-      },
-      {
-        title: "Glamping Cocora Nidos del Condor",
-        path: "/cocora-nidos-del-condor",
-      },
-      {
-        title: "Vivero Cocora Viva",
-        path: "/cocora-viva",
-      },
-    ],
+  english: {
+    home: "Home",
+    place: "The Place",
+    who: "Who Are We?",
+    arrive: "How to Arrive",
+    valley: "Cocora Valley",
+    services: "Services",
+    restaurant: "Restaurant",
+    coffee: "Coffee House",
+    lodging: "Lodging",
+    camping: "Camping",
+    games: "Games",
+    horse: "Horse Back Riding",
+    crafts: "Regional Crafts",
+    glamping: "Glamping Cocora Nidos del Condor",
+    flowers: "Florist Cocora Viva",
+    packages: "Packages & Promotions",
+    reviews: "Reviews",
+    bookings: "Bookings",
+    contact: "Contact us",
   },
-  {
-    text: "Planes y Promociones",
-    path: "/packages-and-sales",
-    subservices: 0,
-  },
-  { text: "Testimonios", path: "/reviews", subservices: 0 },
-  { text: "Reservas", path: "/booking", subservices: 0 },
-  { text: "Contáctenos", path: "/contact-us", subservices: 0 },
-];
+};
 
 const ResponsiveAppBar = (props) => {
+  const { language, changeLanguage } = useContext(LanguageContext);
+
+  const pages = [
+    { text: words[language].home, path: "/", subservices: 0 },
+    {
+      text: words[language].place,
+      path: "/location",
+      subservices: [
+        {
+          title: words[language].who,
+          path: "/who-are-we",
+        },
+        {
+          title: words[language].arrive,
+          path: "/arrive",
+        },
+        {
+          title: words[language].valley,
+          path: "/cocora-valley",
+        },
+      ],
+    },
+    {
+      text: words[language].services,
+      path: "/services",
+      subservices: [
+        {
+          title: words[language].restaurant,
+          path: "/restaurant",
+        },
+        {
+          title: words[language].coffee,
+          path: "/cofee-house",
+        },
+        {
+          title: words[language].lodging,
+          path: "/lodging",
+        },
+        {
+          title: words[language].camping,
+          path: "/camping",
+        },
+        {
+          title: words[language].games,
+          path: "/games",
+        },
+        {
+          title: words[language].horse,
+          path: "/horseback-riding",
+        },
+        {
+          title: words[language].crafts,
+          path: "/regional-crafts",
+        },
+        {
+          title: words[language].glamping,
+          path: "/cocora-nidos-del-condor",
+        },
+        {
+          title: words[language].flowers,
+          path: "/cocora-viva",
+        },
+      ],
+    },
+    {
+      text: words[language].packages,
+      path: "/packages-and-sales",
+      subservices: 0,
+    },
+    { text: words[language].reviews, path: "/reviews", subservices: 0 },
+    { text: words[language].bookings, path: "/booking", subservices: 0 },
+    { text: words[language].contact, path: "/contact-us", subservices: 0 },
+  ];
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const { classes } = props;
@@ -220,6 +269,19 @@ const ResponsiveAppBar = (props) => {
                 />
               </div>
             ))}
+            <div style={{ margin: "20px" }}>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={language}
+                label="Language"
+                onChange={changeLanguage}
+                size="small"
+              >
+                <MenuItem value="spanish">🇨🇴</MenuItem>
+                <MenuItem value="english">🇺🇸</MenuItem>
+              </Select>
+            </div>
           </Box>
         </Toolbar>
       </Container>
