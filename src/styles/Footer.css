@@ -206,6 +206,8 @@ div.logos button:hover{
 
     .social-media p{
         margin-left: -10px;
+        width: 50%
+
     }
 
     .logo{
@@ -214,10 +216,6 @@ div.logos button:hover{
 }
 
 @media (max-width: 370px){
-    .social-media p{
-        width: 50%
-    }
-
     .logo{
         font-size: 0.8em !important;
     }
