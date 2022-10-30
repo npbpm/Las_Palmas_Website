@@ -3,27 +3,7 @@ import { withStyles } from "@mui/styles";
 import style from "./styles/RegionalcraftsStyle";
 import { Typography } from "@mui/material";
 import { LanguageContext } from "./context/LanguageContext";
-
-const words = {
-  spanish: {
-    title: "Artesanías de la región",
-    text1:
-      "Visite nuestro almacén de artesanías con productos exclusivos fabricados por artesanos de Salento donde podrá adquirir un lindo souvenir para llevar de recuerdo.",
-    text2:
-      "Nuestras artesanías son fabricadas 100% a mano, con tecnicas tanto regionales como de otros paises.",
-    text3:
-      "No pierdas la oportunidad de llevarte un pedazo de la cultura del Valle!",
-  },
-  english: {
-    title: "Regional Crafts",
-    text1:
-      "Come visit our crafts store with exclusive products handmade by Salento's craftsmen, here you can buy a souvenir to take home this amazing experience!",
-    text2:
-      "Every single craft is 100% handmade, using regional and international techniques.",
-    text3:
-      "Take this once in a lifetime opportunity to bring home a piece of the Cocora Valley!",
-  },
-};
+import words from "./text/RegionalcraftsWords";
 
 function Regionalcrafts(props) {
   const { classes } = props;

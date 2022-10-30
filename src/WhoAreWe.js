@@ -3,19 +3,7 @@ import { withStyles } from "@mui/styles";
 import style from "./styles/WhoAreWeStyle";
 import { Typography } from "@mui/material";
 import { LanguageContext } from "./context/LanguageContext";
-
-const words = {
-  spanish: {
-    title: "Quienes Somos",
-    history: "Nuestra Historia",
-    societies: "Asociaciones",
-  },
-  english: {
-    title: "Who Are We?",
-    history: "Our History",
-    societies: "Societies",
-  },
-};
+import words from "./text/WhoAreWeWords";
 
 function WhoAreWe(props) {
   const { classes } = props;

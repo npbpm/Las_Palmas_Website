@@ -78,7 +78,138 @@ footer .social-media{
     margin: 2px
 }
 
+.logo{
+    font-size: 2em !important;
+}
+
 div.logos button:hover{
     color: rgb(48, 139, 48);
     transition: ease-in-out all 0.3s;
 }
+
+.list-section div li button{
+    font-family: 'Libre Baskerville', serif !important;
+    text-align: center;
+    text-transform: none;
+    font-size: 1em !important;
+    margin: 2px;
+    padding: 0;
+    flex-shrink: 1 !important;
+}
+
+@media (max-width: 991.98px){
+    .list-section{
+        width: 25rem
+    }
+    .list-section div li button{
+        font-family: 'Libre Baskerville', serif !important;
+        text-transform: none;
+        font-size: 0.99em !important;
+        margin: 0;
+        padding: 0;
+        transform: translateX(14px);
+    }
+}
+
+@media (max-width: 767.98px){
+    footer{
+        width: 100%
+    }
+
+    .list-section{
+        width: 15rem
+    }
+
+    .list-section h5{
+        font-size: 1em;
+        width: 50%;
+    }  
+
+    .footer{
+        align-items: flex-start;
+        width: 100;
+        justify-content: center;
+    }
+
+    .list-section ul{
+        margin: 0;
+        padding: 0;
+    }
+    .list-section div{
+        margin: 10px
+    }
+
+    .list-section ul li{
+        font-size: 0.6em;
+    }
+
+    .list-section div ul{
+        margin-top: -10px;
+    }
+
+    .social-media{
+        font-size: 0.7em;
+    }
+
+    .social-media p{
+        margin-left: -15px;
+    }
+
+    .logo{
+        font-size: 1em !important;
+    }
+
+    .list-section div li button{
+        font-family: 'Libre Baskerville', serif !important;
+        text-transform: none;
+        font-size: 0.99em !important;
+        margin: 0;
+        padding: 0;
+        transform: translateX(5px);
+    }
+}
+
+@media (max-width: 575.98px){
+    footer{
+        width: 100%
+    }
+    .list-section h5{
+        font-size: 1em;
+        width: 50%;
+    }  
+
+    .footer{
+        align-items: flex-start;
+        width: 100;
+        justify-content: center;
+    }
+
+    .list-section ul{
+        margin: 0;
+        padding: 0;
+    }
+    .list-section div{
+        margin: 10px
+    }
+
+    .list-section ul li{
+        font-size: 0.6em;
+    }
+
+    .list-section div ul{
+        margin-top: -10px;
+    }
+
+    .social-media{
+        font-size: 0.45em;
+    }
+
+    .social-media p{
+        margin-left: -10px;
+    }
+
+    .logo{
+        font-size: 1em !important;
+    }
+}
+

@@ -1,0 +1,23 @@
+.slide-container{
+    max-height: 100%;
+}
+
+@media(max-width: 1199.98px){
+    .slide-container{
+        width: 35% !important;
+        height:auto;
+    }
+}
+
+@media(max-width: 991.98px){
+    .slide-container{
+        margin-left: auto;
+        margin-right: auto;
+        width: 66% !important;
+    }
+}
+@media(max-width: 767.98px){
+    .slide-container{
+        width: 98% !important;
+    }
+}

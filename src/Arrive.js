@@ -3,15 +3,7 @@ import { withStyles } from "@mui/styles";
 import styles from "./styles/ArriveStyle";
 import { Typography } from "@mui/material";
 import { LanguageContext } from "./context/LanguageContext";
-
-const words = {
-  spanish: {
-    title: "Como llegar",
-  },
-  english: {
-    title: "How to Arrive",
-  },
-};
+import words from "./text/ArriveWords";
 
 function Arrive(props) {
   const { classes } = props;

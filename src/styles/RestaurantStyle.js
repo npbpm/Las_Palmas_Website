@@ -1,12 +1,24 @@
+import sizes from "./sizes";
+
 const style = {
   container: {
     textAlign: "center",
-    height: "900px",
+    width: "100%",
     "& p": {
       padding: "10px",
     },
     "& h3": {
       fontFamily: "'Libre Baskerville', serif !important",
+    },
+    [sizes.down("md")]: {
+      "& h1": {
+        fontSize: "5.4rem",
+      },
+    },
+    [sizes.down("us")]: {
+      "& h1": {
+        fontSize: "4.8rem",
+      },
     },
   },
   content: {
@@ -14,6 +26,12 @@ const style = {
     padding: "10px",
     marginTop: "100px",
     alignItems: "center",
+    [sizes.down("md")]: {
+      display: "block",
+      marginLeft: "auto",
+      marginRight: "auto",
+      padding: "2px",
+    },
   },
   text: {
     backgroundColor: "#eeeeee",
@@ -22,6 +40,9 @@ const style = {
     marginLeft: "10px",
     fontFamily: "'Libre Baskerville', serif !important",
     fontSize: "1.2rem",
+    [sizes.down("md")]: {
+      margin: 0,
+    },
   },
   image: {
     maxWidth: "100%",
@@ -34,7 +55,18 @@ const style = {
   menu: {
     color: "black",
   },
-  environments: {},
+  environments: {
+    padding: "8px 2px",
+    "& ul": {
+      [sizes.down("xl")]: {
+        margin: 0,
+        padding: 0,
+      },
+    },
+    [sizes.down("us")]: {
+      fontSize: "1.1rem",
+    },
+  },
   plans: {
     display: "flex",
     alignItems: "center",

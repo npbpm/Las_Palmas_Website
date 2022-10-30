@@ -4,6 +4,7 @@ import Slideshow from "./SlideShow";
 import style from "./styles/HorsebackridingStyle";
 import { Typography } from "@mui/material";
 import { LanguageContext } from "./context/LanguageContext";
+import words from "./text/HorsebackridingWords";
 
 const images = [
   {
@@ -13,15 +14,6 @@ const images = [
     url: "./images/caminata1.jpg",
   },
 ];
-
-const words = {
-  spanish: {
-    title: "Paseos Ecológicos a Caballo y Caminatas",
-  },
-  english: {
-    title: "Ecological Horseback Riding",
-  },
-};
 
 function Horsebackriding(props) {
   const { classes } = props;
@@ -34,7 +26,7 @@ function Horsebackriding(props) {
     <div className={classes.container}>
       <Typography variant="h1">{title}</Typography>
       <div className={classes.content}>
-        <Slideshow slideImages={images} width={"610px"} height={"650px"} />
+        <Slideshow slideImages={images} width={"610px"} height={"600px"} />
         {language === "spanish" ? (
           <p>
             Deguste de un exquisito plato de trucha y continúe su experiencia en

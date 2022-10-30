@@ -1,3 +1,5 @@
+import sizes from "./sizes";
+
 const style = {
   content: {
     padding: "10px",
@@ -5,7 +7,6 @@ const style = {
     alignItems: "center",
     justifyContent: "center",
     marginTop: "100px",
-
     "& img": {
       boxShadow: "10px 10px 5px #ccc",
       mozBoxShadow: "10px 10px 5px #ccc",
@@ -26,11 +27,24 @@ const style = {
       width: "60%",
       marginLeft: "20px",
       fontSize: "1.2em",
+      [sizes.down("md")]: {
+        marginLeft: "auto",
+        marginRight: "auto",
+        marginTop: "40px",
+        fontSize: "1em",
+      },
+    },
+    [sizes.down("md")]: {
+      display: "block",
     },
   },
   container: {
     textAlign: "center",
-    height: "1000px",
+    "& h1": {
+      [sizes.down("us")]: {
+        fontSize: "4em",
+      },
+    },
   },
 };
 

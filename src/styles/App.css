@@ -11,7 +11,9 @@ input[type=number] {
     background-image: url("../images/pattern-randomized.svg");
     background-size: cover;
     background-position: bottom;
+    background-repeat: no-repeat;
     /* background by SVGBackgrounds.com */
+    width: 100%;
   }
 
   h1{

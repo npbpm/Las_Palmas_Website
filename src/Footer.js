@@ -9,61 +9,77 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { IconButton, Typography } from "@mui/material";
 import "./styles/Footer.css";
 import { LanguageContext } from "./context/LanguageContext";
+import NavButton from "./NavButton";
+import words from "./text/FooterWords";
 
 const openNewTab = (e, url) => {
   e.preventDefault();
   window.open(url, "_blank", "noopener,noreferer");
 };
 
-const words = {
-  spanish: {
-    access: "Acceso Rapido",
-    home: "Inicio",
-    services: "Servicios",
-    packages: "Planes y Promociones",
-    reviews: "Testimonios",
-    contact: "Contáctenos",
-    address: "primer restaurante a la izquierda",
-    developper: "Desarrollado por",
-  },
-  english: {
-    access: "Quick Access",
-    home: "Home",
-    services: "Services",
-    packages: "Packages and Promotions",
-    reviews: "Reviews",
-    contact: "Contact Us",
-    address: "first restaurant to your left",
-    developper: "Developped By",
-  },
-};
-
 function Footer() {
   const { language } = useContext(LanguageContext);
 
-  const {
-    access,
-    home,
-    services,
-    packages,
-    reviews,
-    contact,
-    address,
-    developper,
-  } = words[language];
+  const footerServices = {
+    text: words[language].services,
+    path: "/services",
+    subservices: [
+      {
+        title: words[language].restaurant,
+        path: "/restaurant",
+      },
+      {
+        title: words[language].coffee,
+        path: "/cofee-house",
+      },
+      {
+        title: words[language].lodging,
+        path: "/lodging",
+      },
+      {
+        title: words[language].camping,
+        path: "/camping",
+      },
+      {
+        title: words[language].games,
+        path: "/games",
+      },
+      {
+        title: words[language].horse,
+        path: "/horseback-riding",
+      },
+      {
+        title: words[language].crafts,
+        path: "/regional-crafts",
+      },
+      {
+        title: words[language].glamping,
+        path: "/cocora-nidos-del-condor",
+      },
+      {
+        title: words[language].flowers,
+        path: "/cocora-viva",
+      },
+    ],
+  };
+
+  const { access, home, packages, reviews, contact, address, developper } =
+    words[language];
 
   return (
     <footer>
       <ul className="footer">
         <li className="list-section">
           <div>
-            <Typography variant="h5">{access}</Typography>
+            <Typography variant="h5" className="access">
+              {access}
+            </Typography>
             <ul>
               <li>
                 <Link to="/">{home}</Link>
               </li>
               <li>
-                <Link to="/services">{services}</Link>
+                <NavButton page={footerServices} />
               </li>
               <li>
                 <Link to="/packages-and-sales">{packages}</Link>
@@ -139,7 +155,7 @@ function Footer() {
               openNewTab(e, "https://www.facebook.com/palmasdecocora/")
             }
           >
-            <FacebookIcon fontSize="large" />
+            <FacebookIcon className="logo" />
           </IconButton>
           <IconButton
             onClick={(e) =>
@@ -149,14 +165,14 @@ function Footer() {
               )
             }
           >
-            <WhatsAppIcon fontSize="large" />
+            <WhatsAppIcon className="logo" />
           </IconButton>
           <IconButton
             onClick={(e) =>
               openNewTab(e, "https://www.instagram.com/laspalmasdecocora/")
             }
           >
-            <InstagramIcon fontSize="large" />
+            <InstagramIcon className="logo" />
           </IconButton>
         </div>
       </div>

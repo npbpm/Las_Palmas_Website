@@ -1,10 +1,15 @@
+import sizes from "./sizes";
+
 const style = {
   container: {
     textAlign: "center",
     marginLeft: "auto",
     marginRight: "auto",
-    height: "900px",
-    overflow: "show",
+    "& h1": {
+      [sizes.down("us")]: {
+        fontSize: "4em",
+      },
+    },
   },
   content: {
     display: "flex",
@@ -14,6 +19,10 @@ const style = {
     marginLeft: "auto",
     marginRight: "auto",
     marginTop: "100px",
+    [sizes.down("md")]: {
+      display: "block",
+      width: "95%",
+    },
   },
   contactUs: {
     width: "30%",
@@ -26,6 +35,19 @@ const style = {
     "& span": {
       marginRight: "10px",
     },
+    [sizes.down("xl")]: {
+      width: "40%",
+      fontSize: "0.95em",
+    },
+    [sizes.down("md")]: {
+      width: "100%",
+      padding: "10px 0",
+      marginRight: "auto",
+      marginLeft: "auto",
+    },
+    [sizes.down("us")]: {
+      fontSize: "0.6em",
+    },
   },
   form: {
     padding: "2px",
@@ -35,6 +57,15 @@ const style = {
     backgroundColor: "#eeeeee",
     "& button": {
       margin: "20px",
+    },
+    [sizes.down("xl")]: {
+      width: "40%",
+    },
+    [sizes.down("md")]: {
+      marginLeft: "auto",
+      marginRight: "auto",
+      width: "90%",
+      marginBottom: "30px",
     },
   },
 };

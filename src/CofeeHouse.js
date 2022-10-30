@@ -3,15 +3,7 @@ import { withStyles } from "@mui/styles";
 import style from "./styles/CofeeHouseStyle";
 import { Typography } from "@mui/material";
 import { LanguageContext } from "./context/LanguageContext";
-
-const words = {
-  spanish: {
-    title: "Casita del Sabor",
-  },
-  english: {
-    title: "Coffee House",
-  },
-};
+import words from "./text/CoffeHouseWords";
 
 function CofeeHouse(props) {
   const { classes } = props;

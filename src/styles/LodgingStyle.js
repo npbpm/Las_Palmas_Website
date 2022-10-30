@@ -1,3 +1,5 @@
+import sizes from "./sizes";
+
 const style = {
   content: {
     display: "flex",
@@ -13,11 +15,17 @@ const style = {
       borderRadius: "13px",
       padding: "30px",
       lineHeight: "1.9em",
+      [sizes.down("md")]: {
+        marginLeft: "auto",
+        marginRight: "auto",
+      },
+    },
+    [sizes.down("md")]: {
+      display: "block",
     },
   },
   container: {
     textAlign: "center",
-    height: "900px",
   },
 };
 

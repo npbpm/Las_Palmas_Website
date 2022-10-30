@@ -1,3 +1,5 @@
+import sizes from "./sizes";
+
 const style = {
   content: {
     display: "flex",
@@ -5,10 +7,20 @@ const style = {
     padding: "10px",
     marginTop: "100px",
     fontFamily: "'Libre Baskerville', serif !important",
+    [sizes.down("md")]: {
+      display: "block",
+    },
   },
   container: {
     textAlign: "center",
-    height: "1000px",
+    "& h1": {
+      [sizes.down("sm")]: {
+        fontSize: "4.7rem",
+      },
+      [sizes.down("us")]: {
+        fontSize: "4rem",
+      },
+    },
   },
   list: {
     textAlign: "center",
@@ -17,6 +29,10 @@ const style = {
     flexDirection: "column",
     "& li": {
       marginBottom: "5px",
+    },
+    [sizes.down("md")]: {
+      padding: 0,
+      margin: 0,
     },
   },
   description: {
@@ -30,6 +46,14 @@ const style = {
       marginLeft: "auto",
       marginRight: "auto",
       textAlign: "left",
+    },
+    [sizes.down("lg")]: {
+      width: "60%",
+    },
+    [sizes.down("md")]: {
+      marginTop: "20px",
+      marginLeft: "auto",
+      marginRight: "auto",
     },
   },
 };

@@ -10,47 +10,7 @@ import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 import style from "./styles/BookingsStyle";
 import { Typography } from "@mui/material";
 import { LanguageContext } from "./context/LanguageContext";
-
-const words = {
-  spanish: {
-    title: "Reservas",
-    name: "Nombre",
-    email: "Correo Electrónico",
-    phone: "Teléfono",
-    quantity: "Cantidad",
-    arrival: "Fecha de Llegada",
-    departure: "Fecha de Salida",
-    message: "Mensaje",
-    sendMessage: "Enviar",
-    contact: "Contáctenos",
-    address: "Primer restaurante a la izquierda",
-    errName: "Porfavor llene su nombre",
-    errEmail: "Porfavor introduzca un correo",
-    errPhone: "Porfavor denos un número de teléfono",
-    errQuantity: "Porfavor indiquenos cuanta gente sería",
-    errArrival: "Indiquenos cuando llega",
-    errDeparture: "Indiquenos cuando se va",
-  },
-  english: {
-    title: "Bookings",
-    name: "Name",
-    email: "Email",
-    phone: "Phone Number",
-    quantity: "Quantity",
-    arrival: "Arrival Date",
-    departure: "Departure Date",
-    message: "Message",
-    sendMessage: "Send",
-    contact: "Contact us",
-    address: "First restaurant to your left",
-    errName: "Please give us your name",
-    errEmail: "Please give us an email",
-    errPhone: "Please give us a phone number",
-    errQuantity: "Please tell us how many people will be coming",
-    errArrival: "Tell us when you are arriving",
-    errDeparture: "Tell us when you are leaving",
-  },
-};
+import words from "./text/BookingWords";
 
 function Bookings(props) {
   const { classes } = props;

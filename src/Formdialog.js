@@ -13,37 +13,7 @@ import {
 import { lightGreen } from "@mui/material/colors";
 import { useContext } from "react";
 import { LanguageContext } from "./context/LanguageContext";
-
-const words = {
-  spanish: {
-    newR: "Nuevo Testimonio",
-    text: "Su opinión es muy importante para nosotros!",
-    cancel: "Cancelar",
-    send: "Enviar",
-    poor: "Pobre",
-    medium: "Regular",
-    good: "Bueno",
-    veryGood: "Muy Bueno",
-    excelent: "Excelente",
-    nameRequired: "Porfavor llene su nombre",
-    scoreRequired: "Porfavor seleccione un puntaje",
-    reviewRequired: "Porfavor dejenos su opinión",
-  },
-  english: {
-    newR: "New Review",
-    text: "Your opinion is very important to us",
-    cancel: "Cancel",
-    send: "Send",
-    poor: "Poor",
-    medium: "Normal",
-    good: "Good",
-    veryGood: "Very Good",
-    excelent: "Excelent",
-    nameRequired: "Please fill out your name",
-    scoreRequired: "Please give us a score",
-    reviewRequired: "Please leave us your opinion",
-  },
-};
+import words from "./text/FormDialogWords";
 
 export default function FormDialog(props) {
   const { addOpinion } = props;

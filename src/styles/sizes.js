@@ -3,7 +3,7 @@ const sizes = {
 
   down(size) {
     const sizes = {
-      us: "370px",
+      us: "375px",
       xs: "575.98px",
       sm: "767.98px",
       md: "991.98px",

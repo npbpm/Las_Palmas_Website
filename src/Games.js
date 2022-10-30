@@ -4,6 +4,7 @@ import Slideshow from "./SlideShow";
 import style from "./styles/GamesStyle";
 import { Typography } from "@mui/material";
 import { LanguageContext } from "./context/LanguageContext";
+import words from "./text/GamesWords";
 
 const images = [
   {
@@ -23,31 +24,6 @@ const images = [
   },
 ];
 
-const words = {
-  spanish: {
-    title: "Atracciones",
-    content:
-      "LAS PALMAS DE COCORA lo invita a que disfrute de nuestras instalaciones para niños y adultos:",
-    games: "PARQUE INFANTIL",
-    volley: "CANCHA DE VOLEY-VERDE",
-    football: "CANCHA DE MICRO FÚTBOL",
-    animals: "TERNEROS",
-    lake: "LAGO CON GANSOS",
-    horses: "CABALLOS PARA CABALGATAS",
-  },
-  english: {
-    title: "Attractions",
-    content:
-      "LAS PALMAS DE COCORA invites you to enjoy our installations for children and adults: ",
-    games: "PLAY ZONE",
-    volley: "VOLLEYBALL FIELD",
-    football: "FOOTBALL FIELD",
-    animals: "COW CALVES",
-    lake: "GEESE LAKE",
-    horses: "HORSE RIDING",
-  },
-};
-
 function Games(props) {
   const { classes } = props;
 
@@ -60,17 +36,8 @@ function Games(props) {
     <div className={classes.container}>
       <Typography variant="h1">{title}</Typography>
       <div className={classes.content}>
-        <Slideshow slideImages={images} width={"630px"} height={"600px"} />
-        <div
-          style={{
-            padding: "20px",
-            textAlign: "center",
-            boxShadow: "rgb(38, 57, 77) 0px 20px 30px -10px",
-            backgroundColor: "#eeeeee",
-            borderRadius: "13px",
-            marginLeft: "40px",
-          }}
-        >
+        <Slideshow slideImages={images} width={"630px"} height={"500px"} />
+        <div className={classes.description}>
           <ul>
             <Typography variant="h4">{content}</Typography>
             <li>{games}</li>

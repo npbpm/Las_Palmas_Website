@@ -1,3 +1,5 @@
+import sizes from "./sizes";
+
 const style = {
   home: {
     width: "100%",
@@ -17,6 +19,10 @@ const style = {
       marginRight: "auto",
       backgroundColor: "#eeeeee",
       padding: "20px",
+      [sizes.down("md")]: {
+        boxShadow:
+          "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px",
+      },
     },
   },
   serviceCards: {
@@ -32,10 +38,21 @@ const style = {
     marginTop: "80px",
     "& img": {
       borderRadius: "20%",
-      boxShadow: "rgba(0, 0, 0, 0.56) 0px 22px 70px 4px",
+      boxShadow:
+        "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px",
+      width: "45%",
+      [sizes.down("sm")]: {
+        width: "95%",
+        marginLeft: "auto",
+        marginRight: "auto",
+        height: "300px",
+      },
     },
     marginLeft: "20px",
     marginRight: "10px",
+    [sizes.down("sm")]: {
+      display: "block",
+    },
   },
 };
 

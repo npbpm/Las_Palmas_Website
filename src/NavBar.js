@@ -15,51 +15,7 @@ import style from "./styles/NavbarStyle";
 import { green } from "@mui/material/colors";
 import { Select } from "@mui/material";
 import { LanguageContext } from "./context/LanguageContext";
-
-const words = {
-  spanish: {
-    home: "Inicio",
-    place: "El Lugar",
-    who: "Quienes Somos?",
-    arrive: "Como Llegar",
-    valley: "Valle de Cocora",
-    services: "Servicios",
-    restaurant: "Restaurante",
-    coffee: "Casita del Sabor",
-    lodging: "Hospedaje",
-    camping: "Campamento",
-    games: "Atracciones",
-    horse: "Paseos Écologicos a Caballo y Caminatas",
-    crafts: "Artesanías de la Región",
-    glamping: "Glamping Cocora Nidos del Condor",
-    flowers: "Vivero Cocora Viva",
-    packages: "Planes y Promociones",
-    reviews: "Testimonios",
-    bookings: "Reservas",
-    contact: "Contáctenos",
-  },
-  english: {
-    home: "Home",
-    place: "The Place",
-    who: "Who Are We?",
-    arrive: "How to Arrive",
-    valley: "Cocora Valley",
-    services: "Services",
-    restaurant: "Restaurant",
-    coffee: "Coffee House",
-    lodging: "Lodging",
-    camping: "Camping",
-    games: "Attractions",
-    horse: "Horseback Riding",
-    crafts: "Regional Crafts",
-    glamping: "Glamping Cocora Nidos del Condor",
-    flowers: "Florist Cocora Viva",
-    packages: "Packages & Promotions",
-    reviews: "Reviews",
-    bookings: "Bookings",
-    contact: "Contact us",
-  },
-};
+import words from "./text/NavbarWords";
 
 const ResponsiveAppBar = (props) => {
   const { language, changeLanguage } = useContext(LanguageContext);
@@ -178,6 +134,7 @@ const ResponsiveAppBar = (props) => {
               color: "black",
               textDecoration: "none",
             }}
+            className={classes.logoContainer}
           >
             <img
               className={classes.logo}
@@ -222,13 +179,27 @@ const ResponsiveAppBar = (props) => {
                   />
                 </MenuItem>
               ))}
+              <MenuItem>
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  value={language}
+                  label="Language"
+                  onChange={changeLanguage}
+                  size="small"
+                  variant="standard"
+                >
+                  <MenuItem value="spanish">🇨🇴</MenuItem>
+                  <MenuItem value="english">🇺🇸</MenuItem>
+                </Select>
+              </MenuItem>
             </Menu>
           </Box>
           <Typography
             variant="h5"
             noWrap
             component="a"
-            href=""
+            href="/"
             sx={{
               display: { xs: "flex", md: "none" },
               flexGrow: 1,

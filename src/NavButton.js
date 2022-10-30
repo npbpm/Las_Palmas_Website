@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { Link, redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { withStyles } from "@mui/styles";
 import style from "./styles/NavButtonStyle";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
 function MenuPopupState(props) {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -24,25 +26,18 @@ function MenuPopupState(props) {
   if (page.subservices !== 0) {
     return (
       <React.Fragment>
-        <Link className={classes.link} to={page.path}>
-          <Button
-            onMouseOver={(e) => handleMouseOver(e)}
-            onClick={(e) => {
-              e.stopPropagation();
-              redirect(page.path);
-            }}
-            sx={{
-              color: "black",
-              fontWeight: "500",
-              fontSize: "1.2rem",
-              bgcolor: "transparent",
-              textTransform: "none",
-              fontFamily: "'Lobster', cursive !important",
-            }}
-          >
-            {page.text}
-          </Button>
-        </Link>
+        <Button
+          className={classes.dropBtn}
+          onMouseOver={(e) => handleMouseOver(e)}
+          onClick={(e) => {
+            e.stopPropagation();
+            handleMouseOver(e);
+          }}
+        >
+          {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+          {page.text}
+        </Button>
+
         <Menu
           anchorEl={anchorEl}
           open={open}
@@ -58,11 +53,7 @@ function MenuPopupState(props) {
               to={subservice.path}
               key={idx}
             >
-              <MenuItem
-                sx={{
-                  fontFamily: "'Libre Baskerville', serif",
-                }}
-              >
+              <MenuItem className={classes.menuItem}>
                 {subservice.title}
               </MenuItem>
             </Link>

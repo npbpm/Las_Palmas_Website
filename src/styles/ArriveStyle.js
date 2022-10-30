@@ -1,3 +1,5 @@
+import sizes from "./sizes";
+
 const styles = {
   container: {
     textAlign: "center",
@@ -21,6 +23,11 @@ const styles = {
     mozBoxShadow: "10px 10px 5px #ccc",
     webkitBoxShadow: "10px 10px 5px #ccc",
     khtmlBoxShadow: "10px 10px 5px #ccc",
+    [sizes.down("md")]: {
+      height: "200px",
+      boxShadow:
+        "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px",
+    },
   },
   paragraph: {
     width: "60%",
@@ -30,6 +37,12 @@ const styles = {
     fontSize: "1.5rem",
     padding: "60px",
     borderRadius: "13px",
+    [sizes.down("md")]: {
+      padding: "15px",
+      fontSize: "1.2em",
+      boxShadow:
+        "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px",
+    },
   },
 };
 

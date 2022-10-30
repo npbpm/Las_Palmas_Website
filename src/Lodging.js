@@ -4,6 +4,7 @@ import Slideshow from "./SlideShow";
 import style from "./styles/LodgingStyle";
 import { Typography } from "@mui/material";
 import { LanguageContext } from "./context/LanguageContext";
+import words from "./text/lodgingWords";
 
 const images = [
   {
@@ -16,15 +17,6 @@ const images = [
     url: "./images/cabin1.jpeg",
   },
 ];
-
-const words = {
-  spanish: {
-    title: "La Cabaña",
-  },
-  english: {
-    title: "The Cabin",
-  },
-};
 
 function Lodging(props) {
   const { classes } = props;

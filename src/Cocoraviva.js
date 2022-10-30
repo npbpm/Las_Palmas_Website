@@ -37,7 +37,7 @@ function Cocoraviva(props) {
         Cocora Viva - {language === "spanish" ? "Vivero" : "Florist"}
       </Typography>
       <div className={classes.content}>
-        <Slideshow slideImages={images} width={"800px"} height={"700px"} />
+        <Slideshow slideImages={images} width={"800px"} height={"600px"} />
         {language === "spanish" ? (
           <p>
             Somos un empresa de talla humana, fundada hace ya 5 años, contamos

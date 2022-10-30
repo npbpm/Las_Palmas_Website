@@ -1,3 +1,5 @@
+import sizes from "./sizes";
+
 const style = {
   container: {
     textAlign: "center",
@@ -21,6 +23,10 @@ const style = {
       borderRadius: "13px",
       fontSize: "1.2em",
       textAlign: "left",
+      [sizes.down("md")]: {
+        margin: 0,
+        marginTop: "40px",
+      },
     },
     alignItems: "center",
     justifyContent: "center",
@@ -28,6 +34,11 @@ const style = {
     marginLeft: "20px",
     marginRight: "20px",
     marginTop: "100px",
+    [sizes.down("md")]: {
+      display: "block",
+      margin: 0,
+      marginTop: "60px",
+    },
   },
 };
 

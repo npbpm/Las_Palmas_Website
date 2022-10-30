@@ -1,6 +1,7 @@
 import React, { memo } from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
+import "./styles/SlideShowStyle.css";
 
 const Slideshow = (props) => {
   const { slideImages, width, height } = props;
