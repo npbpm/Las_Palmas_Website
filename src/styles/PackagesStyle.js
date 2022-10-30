@@ -98,6 +98,9 @@ const style = {
     "&:hover": {
       transform: "scale(1.2)",
       transition: "ease-in-out all 0.3s",
+      [sizes.down("md")]: {
+        transform: "none",
+      },
     },
     [sizes.down("lg")]: {
       width: "32%",
