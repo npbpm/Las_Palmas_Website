@@ -1,5 +1,5 @@
 import "./styles/App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "./Home";
 import ErrorSite from "./ErrorSite";
 import NavBar from "./NavBar";
@@ -37,7 +37,7 @@ function App(props) {
           </div>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="*" element={<ErrorSite />} />
+            <Route path="*" element={<Navigate to={"/"} />} />
             <Route path="/services" element={<ErrorSite />} />
             <Route path="/packages-and-sales" element={<Packages />} />
             <Route path="/reviews" element={<Reviews />} />
