@@ -52,14 +52,14 @@ function Home(props) {
                   backgroundColor: "#eeeeee",
                 }}
               >
-                Adentrados en el valle de cocora, ubicados en el Km 10 del
-                Valle, primer restaurante a la izquierda.
+                Estamos adentrados en el valle de Cocora, justo en el Km 10.
+                Somos el primer restaurante al lado izquierdo.
                 <br />
-                Este es un lugar perfecto para pasar tiempo en familía y/o con
-                amigos, incluso pueden traer a sus familiares peludos!
+                Contamos con un lugar perfecto para pasar tiempo en familía y/o
+                con amigos, incluso tu amigo peludo es más que bienvenido.
                 <br />
-                Dese la oportunidad de vivir nuevas experiencias en la
-                profundidad del valle de cocora, los esperamos con los brazos
+                Date la oportunidad de vivir nuevas experiencias en la
+                profundidad del valle de cocora. ¡Te esperamos con los brazos
                 abiertos!
               </p>
             ) : (

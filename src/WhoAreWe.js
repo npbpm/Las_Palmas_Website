@@ -19,7 +19,7 @@ function WhoAreWe(props) {
         {language === "spanish" ? (
           <p className={classes.paragraphHistory}>
             Tenemos el orgullo de decir que somos el primer restaurante en el
-            Valle de Cocora; gestores de la corriente turística hacia la región
+            Valle de Cocora, gestores de la corriente turística hacia la región
             con una tradición de más de 30 años en el departamento del Quindío.
             <br />
             El Eco-Hotel Las Palmas de Cocora ha sido desde hace más de 30 años

@@ -24,6 +24,7 @@ function Arrive(props) {
         href="https://g.page/valle-del-cocora-salento?share"
         target="_blank"
         rel="noreferrer"
+        className={classes.clickableImg}
       >
         <img
           className={classes.img}
@@ -31,7 +32,6 @@ function Arrive(props) {
           alt="Google Maps not found"
         />
       </a>
-
       <div className={classes.description}>
         {language === "spanish" ? (
           <p className={classes.paragraph}>
