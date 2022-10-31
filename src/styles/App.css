@@ -8,11 +8,6 @@ input[type=number] {
   }
 
   .App{
-    background-image: url("../images/Abstract Paper.svg");
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    /* background by SVGBackgrounds.com */
     width: 100%;
   }
 
