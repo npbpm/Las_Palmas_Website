@@ -62,7 +62,7 @@ const styles = {
   clickableImg: {
     width: "49.5%",
     filter: "grayscale(100%)",
-    [sizes.down("md")]: {
+    [sizes.down("lg")]: {
       filter: "none",
     },
     /* opacity: "0.2", */
@@ -71,14 +71,14 @@ const styles = {
       transition: "ease-in-out all 0.3s",
     },
     "& img": {
-      [sizes.down("md")]: {
+      [sizes.down("lg")]: {
         animation: "$float 6s ease-in-out infinite",
         transition: "none",
       },
       "&:hover": {
         transform: "scale(1.025)",
         transition: "ease-in-out all 0.3s",
-        [sizes.down("md")]: {
+        [sizes.down("lg")]: {
           transform: "none",
         },
       },
