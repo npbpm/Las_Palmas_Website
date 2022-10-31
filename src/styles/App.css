@@ -8,7 +8,7 @@ input[type=number] {
   }
 
   .App{
-    background-image: url("../images/pattern-randomized.svg");
+    background-image: url("../images/Abstract Paper.svg");
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -17,8 +17,10 @@ input[type=number] {
   }
 
   h1{
+    color: #2e7d32;
     border-bottom: solid #3b7302 4px;
     border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     padding-bottom: 5px;
   }

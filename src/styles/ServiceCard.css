@@ -29,7 +29,7 @@
     flex-direction: column;
     text-align: left;
     margin-right: 20px;
-    width: 70%
+    width: 70%;
 }
 
 .right{
@@ -54,6 +54,8 @@ p{
     text-align: center;
     font-weight: 900;
     font-family: 'Lobster', cursive !important;
+    color: #2e7d32;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 
@@ -63,14 +65,20 @@ h1{
 
 h2{
     font-family: 'Lobster', cursive !important;
+    color: #2e7d32;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 h3{
     font-family: 'Lobster', cursive !important;
+    color: #2e7d32;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 h4{
     font-family: 'Lobster', cursive !important;
+    color: #2e7d32;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 @media(max-width: 991.98px){

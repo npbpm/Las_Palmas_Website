@@ -54,6 +54,12 @@ const style = {
   },
   menu: {
     color: "black",
+    fontFamily: "'Libre Baskerville', serif !important",
+    fontSize: "1.5em",
+    fontWeight: "800",
+  },
+  menuItem: {
+    color: "black",
   },
   environments: {
     padding: "8px 2px",

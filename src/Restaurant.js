@@ -75,17 +75,17 @@ function Restaurant(props) {
           <div className={classes.description}>
             <p>{description}</p>
             <div className={classes.menu}>
-              <h3>
+              <p>
                 {menuTitle}{" "}
                 <a
-                  className={classes.menu}
+                  className={classes.menuItem}
                   href={Menu}
                   target="_ blank"
                   rel="noreferrer"
                 >
                   {menu}
                 </a>
-              </h3>
+              </p>
             </div>
             <div className={classes.environments}>
               <h2>{ambientTitle}</h2>
