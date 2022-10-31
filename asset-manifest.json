@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Las_Palmas_Website/static/css/main.26768c0b.css",
+    "main.css": "/Las_Palmas_Website/static/css/main.cf5ffcf9.css",
     "main.js": "/Las_Palmas_Website/static/js/main.0f3c90e1.js",
     "static/js/787.898159d6.chunk.js": "/Las_Palmas_Website/static/js/787.898159d6.chunk.js",
     "static/media/ecosemilla.jpg": "/Las_Palmas_Website/static/media/ecosemilla.6e444a12de9455f31711.jpg",
@@ -90,12 +90,12 @@
     "static/media/Abstract Paper.svg": "/Las_Palmas_Website/static/media/Abstract Paper.8725984c8fcefccf7263.svg",
     "index.html": "/Las_Palmas_Website/index.html",
     "static/media/flat-mountains.svg": "/Las_Palmas_Website/static/media/flat-mountains.62bf5644e0709e3f0c562c4e4f781e3f.svg",
-    "main.26768c0b.css.map": "/Las_Palmas_Website/static/css/main.26768c0b.css.map",
+    "main.cf5ffcf9.css.map": "/Las_Palmas_Website/static/css/main.cf5ffcf9.css.map",
     "main.0f3c90e1.js.map": "/Las_Palmas_Website/static/js/main.0f3c90e1.js.map",
     "787.898159d6.chunk.js.map": "/Las_Palmas_Website/static/js/787.898159d6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.26768c0b.css",
+    "static/css/main.cf5ffcf9.css",
     "static/js/main.0f3c90e1.js"
   ]
 }
