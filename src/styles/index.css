@@ -7,9 +7,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-y: hidden;
   overflow-x: hidden;
-   background-image: url("../images/Abstract Paper.png");
+   background-image: url("../images/Abstract Paper(1).png");
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   background-repeat: no-repeat; 
 }
 
