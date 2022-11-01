@@ -7,10 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-y: hidden;
   overflow-x: hidden;
-  /* background-image: url("../images/Abstract Paper.svg");
+  background-image: url("../images/Abstract Paper.svg");
   background-size: cover;
   background-position: bottom;
-  background-repeat: no-repeat; */
+  background-repeat: no-repeat;
 }
 
 code {
