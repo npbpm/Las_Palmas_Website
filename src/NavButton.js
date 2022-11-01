@@ -43,7 +43,6 @@ function MenuPopupState(props) {
           open={open}
           onClose={handleClose}
           onClick={handleClose}
-          disableScrollLock={true}
         >
           {page.subservices.map((subservice, idx) => (
             <Link
