@@ -26,17 +26,25 @@ function MenuPopupState(props) {
   if (page.subservices !== 0) {
     return (
       <React.Fragment>
-        <Button
-          className={classes.dropBtn}
-          onMouseOver={(e) => handleMouseOver(e)}
-          onClick={(e) => {
-            e.stopPropagation();
-            handleMouseOver(e);
-          }}
-        >
-          {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
-          {page.text}
-        </Button>
+        <div>
+          <Button
+            className={classes.dropBtn}
+            onMouseOver={(e) => handleMouseOver(e)}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleMouseOver(e);
+            }}
+            sx={{
+              paddingBottom: "6px",
+              paddingTop: "6px",
+              paddingLeft: "16px",
+              paddingRight: "16px",
+            }}
+          >
+            {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+            {page.text}
+          </Button>
+        </div>
 
         <Menu
           anchorEl={anchorEl}
