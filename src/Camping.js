@@ -1,4 +1,4 @@
-import React, { memo, useContext } from "react";
+import React, { useContext } from "react";
 import { withStyles } from "@mui/styles";
 import Slideshow from "./SlideShow";
 import style from "./styles/CampingStyle";
@@ -83,4 +83,4 @@ function Camping(props) {
   );
 }
 
-export default withStyles(style)(memo(Camping));
+export default withStyles(style)(Camping);

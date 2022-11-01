@@ -1,4 +1,4 @@
-import React, { memo, useContext } from "react";
+import React, { useContext } from "react";
 import { withStyles } from "@mui/styles";
 import style from "./styles/CocoraValleyStyle";
 import { Typography } from "@mui/material";
@@ -77,4 +77,4 @@ function CocoraValley(props) {
   );
 }
 
-export default withStyles(style)(memo(CocoraValley));
+export default withStyles(style)(CocoraValley);

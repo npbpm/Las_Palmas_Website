@@ -1,4 +1,4 @@
-import React, { memo, useContext } from "react";
+import React, { useContext } from "react";
 import { withStyles } from "@mui/styles";
 import { Typography } from "@mui/material";
 import style from "./styles/PackagesStyle";
@@ -203,4 +203,4 @@ function Packages(props) {
   );
 }
 
-export default withStyles(style)(memo(Packages));
+export default withStyles(style)(Packages);

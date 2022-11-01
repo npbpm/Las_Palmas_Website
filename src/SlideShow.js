@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import "./styles/SlideShowStyle.css";
@@ -39,4 +39,4 @@ const Slideshow = (props) => {
   );
 };
 
-export default memo(Slideshow);
+export default Slideshow;

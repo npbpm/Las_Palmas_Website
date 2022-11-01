@@ -1,4 +1,4 @@
-import React, { memo, useContext } from "react";
+import React, { useContext } from "react";
 import { withStyles } from "@mui/styles";
 import styles from "./styles/ArriveStyle";
 import { Typography } from "@mui/material";
@@ -58,4 +58,4 @@ function Arrive(props) {
   );
 }
 
-export default withStyles(styles)(memo(Arrive));
+export default withStyles(styles)(Arrive);

@@ -1,4 +1,4 @@
-import React, { memo, useContext } from "react";
+import React, { useContext } from "react";
 import { withStyles } from "@mui/styles";
 import Slideshow from "./SlideShow";
 import style from "./styles/HorsebackridingStyle";
@@ -62,4 +62,4 @@ function Horsebackriding(props) {
   );
 }
 
-export default withStyles(style)(memo(Horsebackriding));
+export default withStyles(style)(Horsebackriding);

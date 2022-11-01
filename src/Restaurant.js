@@ -1,4 +1,4 @@
-import React, { memo, useContext } from "react";
+import React, { useContext } from "react";
 import { withStyles } from "@mui/styles";
 import Slideshow from "./SlideShow";
 import Menu from "./images/Menu.pdf";
@@ -140,4 +140,4 @@ function Restaurant(props) {
   );
 }
 
-export default withStyles(style)(memo(Restaurant));
+export default withStyles(style)(Restaurant);

@@ -1,4 +1,4 @@
-import React, { memo, useContext } from "react";
+import React, { useContext } from "react";
 import { withStyles } from "@mui/styles";
 import style from "./styles/CofeeHouseStyle";
 import { Typography } from "@mui/material";
@@ -55,4 +55,4 @@ function CofeeHouse(props) {
   );
 }
 
-export default withStyles(style)(memo(CofeeHouse));
+export default withStyles(style)(CofeeHouse);

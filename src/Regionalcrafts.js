@@ -1,4 +1,4 @@
-import React, { memo, useContext } from "react";
+import React, { useContext } from "react";
 import { withStyles } from "@mui/styles";
 import style from "./styles/RegionalcraftsStyle";
 import { Typography } from "@mui/material";
@@ -29,4 +29,4 @@ function Regionalcrafts(props) {
   );
 }
 
-export default withStyles(style)(memo(Regionalcrafts));
+export default withStyles(style)(Regionalcrafts);

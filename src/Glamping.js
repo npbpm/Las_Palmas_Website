@@ -1,4 +1,4 @@
-import React, { memo, useContext } from "react";
+import React, { useContext } from "react";
 import { withStyles } from "@mui/styles";
 import Slideshow from "./SlideShow";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -224,4 +224,4 @@ function Glamping(props) {
   );
 }
 
-export default withStyles(style)(memo(Glamping));
+export default withStyles(style)(Glamping);
