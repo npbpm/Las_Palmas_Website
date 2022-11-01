@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Las_Palmas_Website/static/css/main.9c31b305.css",
-    "main.js": "/Las_Palmas_Website/static/js/main.b4eec62d.js",
+    "main.js": "/Las_Palmas_Website/static/js/main.18c3285a.js",
     "static/js/787.898159d6.chunk.js": "/Las_Palmas_Website/static/js/787.898159d6.chunk.js",
     "static/media/ecosemilla.jpg": "/Las_Palmas_Website/static/media/ecosemilla.6e444a12de9455f31711.jpg",
     "static/media/plan_cabana.jpg": "/Las_Palmas_Website/static/media/plan_cabana.91361c9afd0775c96df4.jpg",
@@ -91,11 +91,11 @@
     "index.html": "/Las_Palmas_Website/index.html",
     "static/media/flat-mountains.svg": "/Las_Palmas_Website/static/media/flat-mountains.62bf5644e0709e3f0c562c4e4f781e3f.svg",
     "main.9c31b305.css.map": "/Las_Palmas_Website/static/css/main.9c31b305.css.map",
-    "main.b4eec62d.js.map": "/Las_Palmas_Website/static/js/main.b4eec62d.js.map",
+    "main.18c3285a.js.map": "/Las_Palmas_Website/static/js/main.18c3285a.js.map",
     "787.898159d6.chunk.js.map": "/Las_Palmas_Website/static/js/787.898159d6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9c31b305.css",
-    "static/js/main.b4eec62d.js"
+    "static/js/main.18c3285a.js"
   ]
 }
