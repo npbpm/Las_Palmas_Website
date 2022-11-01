@@ -116,6 +116,14 @@ div.logos button:hover{
         padding: 0;
         transform: translateX(14px);
     }
+    .list-section div li span button{
+        font-family: 'Libre Baskerville', serif !important;
+        text-transform: none;
+        font-size: 0.99em !important;
+        margin: 0;
+        padding: 0;
+        transform: none;
+    }
 }
 
 @media (max-width: 767.98px){

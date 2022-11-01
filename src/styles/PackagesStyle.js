@@ -117,7 +117,16 @@ const style = {
         height: "330px !important",
       },
       [sizes.down("md")]: {
-        height: "700px !important",
+        height: "800px !important",
+      },
+      [sizes.down("sm")]: {
+        height: "670px !important",
+      },
+      [sizes.down("xs")]: {
+        height: "500px !important",
+      },
+      [sizes.down("xxs")]: {
+        height: "400px !important",
       },
       [sizes.down("us")]: {
         height: "290px !important",
