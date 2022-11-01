@@ -1,22 +1,28 @@
 .service-card{
     width: 100%;
-    height: 400px;
+    height: auto;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
     background-color: rgba(255, 255, 255, 0);
     padding: 35px;
 }
 
+
 .service-card-image{
     max-height: 100%;
     max-width: 100%;
     width: 450px;
-    height: 400px;
+    height: 450px;
     display: block;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     border-radius: 50%;
+}
+
+.service-card-img a{
+    display: flex;
+    justify-content: center;
 }
 
 .service-card-image:hover{
@@ -28,12 +34,12 @@
     display: flex;
     flex-direction: column;
     text-align: left;
-    margin-right: 20px;
-    width: 70%;
+    width: 60%;
 }
 
 .right{
-    margin-right: auto;
+    margin-left: 0;
+    justify-content: center;
 }
 
 p{
@@ -81,13 +87,30 @@ h4{
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
+@media(max-width: 1199.98px){
+    .service-card{
+        padding: 35px 0;
+    }
+}
+
 @media(max-width: 991.98px){
+
+    .service-card-img{
+        width: 50%;
+    }
+
+    .right{
+        width: 100%;
+        padding-left: 0;
+    }
+
 .right .service-card-image{
-    margin-right: 250px;
     width: 380px;
     height: 400px;
     margin-left: 0;
     box-shadow:rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+    margin-right: 5px;
 }
 
     .service-card-image{
@@ -99,28 +122,32 @@ h4{
 }
 
 @media (max-width: 767.98px){
-.service-card{
-    padding-left: 5px;
+
+
+.right .service-card-text{
+    margin-left: 0;
 }
 
     .service-card-image{
         width: 200px;
         height: 200px;
-        margin-left: 6px;
         margin-right: 5px;
     }
 
     .right .service-card-image{
-        margin-right: 150px;
         width: 200px;
         height: 200px;
-        margin-left: 15px;
     }
+
 }
 
 @media (max-width: 575.98px){
     .service-card{
         padding-left: 5px;
+    }
+
+    .right{
+        justify-content: space-around;
     }
     
         .service-card-image{
@@ -131,14 +158,18 @@ h4{
         }
     
         .right .service-card-image{
-            margin-right: 150px;
             width: 200px;
             height: 200px;
-            margin-left: 15px;
+            margin-right: 0;
         }
 
          .service-card-text{
             margin-left: 20px;
+            width: 50%;
+        }
+
+        .service-card-img{
+            width: 50%;
         }
 
         .description{

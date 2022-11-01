@@ -10,7 +10,8 @@ li a:hover{
 }
 
 .footer{
-    background-color: #605d57;
+    /* background-color: #605d57; */
+    background-color:  	#e8de97;
     height: auto;
     display: flex;
     justify-content: space-around;
@@ -95,6 +96,12 @@ div.logos button:hover{
     margin: 2px;
     padding: 0;
     flex-shrink: 1 !important;
+}
+
+.MuiIconButton-root{
+    color: black !important;
+    opacity: 1 !important;
+    padding: 0 !important
 }
 
 @media (max-width: 991.98px){

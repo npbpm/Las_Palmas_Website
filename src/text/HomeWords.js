@@ -89,7 +89,7 @@ const words = {
     {
       title: "Horse Back Riding",
       description:
-        "A Horseback Ride inside the Cocora Valley at Salento, Quindio is and experience you cannot miss on your agenda, a unique landscape filled with wax palm trees in the middle of the mountains.",
+        "A Horseback Ride inside the Cocora Valley at Salento, Quindio is an experience you cannot miss on your agenda, a unique landscape filled with wax palm trees in the middle of the mountains.",
       img: "./images/HorseRiding.jpeg",
       path: "/horseback-riding",
     },

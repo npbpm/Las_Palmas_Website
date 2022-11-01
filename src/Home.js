@@ -75,8 +75,8 @@ function Home(props) {
                 Deep inside the Cocora Valley, we are located on the 10
                 <sup>th</sup> Km of the Valley, first restaurant to your left.
                 <br />
-                This is the perfect place to spend spend time with your family
-                and friends, you can even bring your pets!
+                This is the perfect place to spend time with your family and
+                friends, you can even bring your pets!
                 <br />
                 Let yourself live this new experience in the deeps of the
                 Valley, we are waiting for you with open arms!

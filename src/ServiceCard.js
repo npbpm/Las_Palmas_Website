@@ -9,7 +9,7 @@ function ServiceCard(props) {
   if (display % 2 === 0) {
     return (
       <div className="service-card">
-        <div>
+        <div className="service-card-img">
           <Link to={path}>
             <img
               className="service-card-image"
@@ -35,7 +35,7 @@ function ServiceCard(props) {
           </Typography>
           <p className="description">{description}</p>
         </div>
-        <div>
+        <div className="service-card-img">
           <Link to={path}>
             <img
               className="service-card-image"
