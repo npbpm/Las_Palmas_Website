@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Las_Palmas_Website/static/css/main.9b027b62.css",
-    "main.js": "/Las_Palmas_Website/static/js/main.0f793106.js",
+    "main.css": "/Las_Palmas_Website/static/css/main.bded909a.css",
+    "main.js": "/Las_Palmas_Website/static/js/main.ef0a32ca.js",
     "static/js/787.898159d6.chunk.js": "/Las_Palmas_Website/static/js/787.898159d6.chunk.js",
     "static/media/ecosemilla.jpg": "/Las_Palmas_Website/static/media/ecosemilla.6e444a12de9455f31711.jpg",
     "static/media/plan_cabana.jpg": "/Las_Palmas_Website/static/media/plan_cabana.91361c9afd0775c96df4.jpg",
@@ -23,8 +23,8 @@
     "static/media/HorseRiding.jpeg": "/Las_Palmas_Website/static/media/HorseRiding.112fabd3a4e9752bcdf2.jpeg",
     "static/media/vivero5.jpeg": "/Las_Palmas_Website/static/media/vivero5.adc9fe73041f82195727.jpeg",
     "static/media/artesanias.jpeg": "/Las_Palmas_Website/static/media/artesanias.baffe8c0c5bbe9d19068.jpeg",
-    "static/media/Abstract Paper.png": "/Las_Palmas_Website/static/media/Abstract Paper.a10619a234a0b93de64b.png",
     "static/media/FrenteRestaurante.jpeg": "/Las_Palmas_Website/static/media/FrenteRestaurante.35602f7b3297f572b27d.jpeg",
+    "static/media/Abstract Paper(1).png": "/Las_Palmas_Website/static/media/Abstract Paper(1).d209ce49db9d482b482b.png",
     "static/media/Entrada.jpeg": "/Las_Palmas_Website/static/media/Entrada.35d0c8f10151dfb2603d.jpeg",
     "static/media/PALMAS DE COCORA LOGO-1.png": "/Las_Palmas_Website/static/media/PALMAS DE COCORA LOGO-1.c81976ad93331b9fd221.png",
     "static/media/vivero3.jpeg": "/Las_Palmas_Website/static/media/vivero3.b15814c9eca65eff4a2c.jpeg",
@@ -88,15 +88,14 @@
     "static/media/MariaT.jpeg": "/Las_Palmas_Website/static/media/MariaT.45845356fa3334ea0069.jpeg",
     "static/media/glamping22.jpeg": "/Las_Palmas_Website/static/media/glamping22.8de2910976b899b7cdf6.jpeg",
     "static/media/pattern-randomized.svg": "/Las_Palmas_Website/static/media/pattern-randomized.5b01c06050f6bacd8ca0.svg",
-    "static/media/Abstract Paper.svg": "/Las_Palmas_Website/static/media/Abstract Paper.34dba5c3e1084ee199a0.svg",
     "index.html": "/Las_Palmas_Website/index.html",
     "static/media/flat-mountains.svg": "/Las_Palmas_Website/static/media/flat-mountains.62bf5644e0709e3f0c562c4e4f781e3f.svg",
-    "main.9b027b62.css.map": "/Las_Palmas_Website/static/css/main.9b027b62.css.map",
-    "main.0f793106.js.map": "/Las_Palmas_Website/static/js/main.0f793106.js.map",
+    "main.bded909a.css.map": "/Las_Palmas_Website/static/css/main.bded909a.css.map",
+    "main.ef0a32ca.js.map": "/Las_Palmas_Website/static/js/main.ef0a32ca.js.map",
     "787.898159d6.chunk.js.map": "/Las_Palmas_Website/static/js/787.898159d6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b027b62.css",
-    "static/js/main.0f793106.js"
+    "static/css/main.bded909a.css",
+    "static/js/main.ef0a32ca.js"
   ]
 }
