@@ -1,4 +1,4 @@
-import React, { useContext, memo } from "react";
+import React, { useContext } from "react";
 import { withStyles } from "@mui/styles";
 import ServiceCard from "./ServiceCard";
 import { Typography } from "@mui/material";
@@ -95,4 +95,4 @@ function Home(props) {
   );
 }
 
-export default withStyles(style)(memo(Home));
+export default withStyles(style)(Home);

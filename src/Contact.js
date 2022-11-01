@@ -1,4 +1,4 @@
-import React, { useState, memo, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { withStyles } from "@mui/styles";
 import Button from "@mui/material/Button";
 import { send } from "emailjs-com";
@@ -175,4 +175,4 @@ function Bookings(props) {
   );
 }
 
-export default withStyles(style)(memo(Bookings));
+export default withStyles(style)(Bookings);
