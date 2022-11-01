@@ -21,7 +21,7 @@ const style = {
     fontWeight: "500",
     textDecoration: "none",
     fontFamily: "'Lobster', cursive !important",
-
+    width: "100%",
     [sizes.down("md")]: {
       fontSize: "1rem",
     },
@@ -29,6 +29,11 @@ const style = {
   menuItem: {
     fontFamily: "'Libre Baskerville', serif !important",
     fontSize: "1em",
+    width: "100% !important",
+  },
+  menuItemNoSubServices: {
+    fontFamily: "'Lobster', cursive !important",
+    fontSize: "1em !important",
     width: "100% !important",
   },
 };

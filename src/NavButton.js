@@ -43,6 +43,7 @@ function MenuPopupState(props) {
           open={open}
           onClose={handleClose}
           onClick={handleClose}
+          disableScrollLock={true}
         >
           {page.subservices.map((subservice, idx) => (
             <Link
@@ -69,7 +70,9 @@ function MenuPopupState(props) {
         onClick={(e) => handleCloseNavMenu(e, page.path)}
         style={{ color: "black" }}
       >
-        {page.text}
+        <MenuItem className={classes.menuItemNoSubServices}>
+          {page.text}
+        </MenuItem>
       </Link>
     );
   }

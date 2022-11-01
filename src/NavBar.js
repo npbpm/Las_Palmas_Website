@@ -221,12 +221,11 @@ const ResponsiveAppBar = (props) => {
                 }}
               >
                 {pages.map((page, idx) => (
-                  <MenuItem key={idx} onClick={handleCloseNavMenu}>
-                    <NavButton
-                      page={page}
-                      handleCloseNavMenu={handleCloseNavMenu}
-                    />
-                  </MenuItem>
+                  <NavButton
+                    key={idx}
+                    page={page}
+                    handleCloseNavMenu={handleCloseNavMenu}
+                  />
                 ))}
                 <MenuItem>
                   <Select
