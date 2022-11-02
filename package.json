@@ -2,7 +2,7 @@
   "name": "website-palmas",
   "version": "0.1.0",
   "homepage": "https://npbpm.github.io/Las_Palmas_Website",
-  "private": true,
+  "main": "index.js",
   "proxy": "https://sheltered-retreat-22436.herokuapp.com/",
   "dependencies": {
     "@emotion/react": "^11.10.4",
