@@ -13,7 +13,7 @@ function Reviews(props) {
   const addOpinion = (opinion) => {
     setOpinions([...opinions, opinion]);
 
-    axios.post("http://localhost:3001/create", opinion);
+    axios.post("/create", opinion);
   };
 
   const [opinions, setOpinions] = useState([]);
